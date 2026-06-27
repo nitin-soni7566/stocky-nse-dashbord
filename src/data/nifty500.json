@@ -1,0 +1,4002 @@
+[
+  {
+    "symbol": "360ONE",
+    "yahooSymbol": "360ONE.NS",
+    "name": "360 ONE WAM Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE466L01038",
+    "series": "EQ"
+  },
+  {
+    "symbol": "3MINDIA",
+    "yahooSymbol": "3MINDIA.NS",
+    "name": "3M India Ltd.",
+    "sector": "Diversified",
+    "isin": "INE470A01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABB",
+    "yahooSymbol": "ABB.NS",
+    "name": "ABB India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE117A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ACC",
+    "yahooSymbol": "ACC.NS",
+    "name": "ACC Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE012A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ACMESOLAR",
+    "yahooSymbol": "ACMESOLAR.NS",
+    "name": "ACME Solar Holdings Ltd.",
+    "sector": "Power",
+    "isin": "INE622W01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AIAENG",
+    "yahooSymbol": "AIAENG.NS",
+    "name": "AIA Engineering Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE212H01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "APLAPOLLO",
+    "yahooSymbol": "APLAPOLLO.NS",
+    "name": "APL Apollo Tubes Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE702C01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AUBANK",
+    "yahooSymbol": "AUBANK.NS",
+    "name": "AU Small Finance Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE949L01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AWL",
+    "yahooSymbol": "AWL.NS",
+    "name": "AWL Agri Business Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE699H01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AADHARHFC",
+    "yahooSymbol": "AADHARHFC.NS",
+    "name": "Aadhar Housing Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE883F01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AARTIIND",
+    "yahooSymbol": "AARTIIND.NS",
+    "name": "Aarti Industries Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE769A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AAVAS",
+    "yahooSymbol": "AAVAS.NS",
+    "name": "Aavas Financiers Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE216P01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABBOTINDIA",
+    "yahooSymbol": "ABBOTINDIA.NS",
+    "name": "Abbott India Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE358A01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ACE",
+    "yahooSymbol": "ACE.NS",
+    "name": "Action Construction Equipment Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE731H01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ACUTAAS",
+    "yahooSymbol": "ACUTAAS.NS",
+    "name": "Acutaas Chemicals Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE00FF01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "yahooSymbol": "ADANIENSOL.NS",
+    "name": "Adani Energy Solutions Ltd.",
+    "sector": "Power",
+    "isin": "INE931S01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ADANIENT",
+    "yahooSymbol": "ADANIENT.NS",
+    "name": "Adani Enterprises Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE423A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "yahooSymbol": "ADANIGREEN.NS",
+    "name": "Adani Green Energy Ltd.",
+    "sector": "Power",
+    "isin": "INE364U01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "yahooSymbol": "ADANIPORTS.NS",
+    "name": "Adani Ports and Special Economic Zone Ltd.",
+    "sector": "Services",
+    "isin": "INE742F01042",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "yahooSymbol": "ADANIPOWER.NS",
+    "name": "Adani Power Ltd.",
+    "sector": "Power",
+    "isin": "INE814H01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ATGL",
+    "yahooSymbol": "ATGL.NS",
+    "name": "Adani Total Gas Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE399L01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABCAPITAL",
+    "yahooSymbol": "ABCAPITAL.NS",
+    "name": "Aditya Birla Capital Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE674K01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABFRL",
+    "yahooSymbol": "ABFRL.NS",
+    "name": "Aditya Birla Fashion and Retail Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE647O01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABLBL",
+    "yahooSymbol": "ABLBL.NS",
+    "name": "Aditya Birla Lifestyle Brands Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE14LE01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABREL",
+    "yahooSymbol": "ABREL.NS",
+    "name": "Aditya Birla Real Estate Ltd.",
+    "sector": "Realty",
+    "isin": "INE055A01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABSLAMC",
+    "yahooSymbol": "ABSLAMC.NS",
+    "name": "Aditya Birla Sun Life AMC Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE404A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CPPLUS",
+    "yahooSymbol": "CPPLUS.NS",
+    "name": "Aditya Infotech Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE819V01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AEGISLOG",
+    "yahooSymbol": "AEGISLOG.NS",
+    "name": "Aegis Logistics Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE208C01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AEGISVOPAK",
+    "yahooSymbol": "AEGISVOPAK.NS",
+    "name": "Aegis Vopak Terminals Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE0INX01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AFCONS",
+    "yahooSymbol": "AFCONS.NS",
+    "name": "Afcons Infrastructure Ltd.",
+    "sector": "Construction",
+    "isin": "INE101I01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AFFLE",
+    "yahooSymbol": "AFFLE.NS",
+    "name": "Affle 3i Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE00WC01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AJANTPHARM",
+    "yahooSymbol": "AJANTPHARM.NS",
+    "name": "Ajanta Pharmaceuticals Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE031B01049",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ALKEM",
+    "yahooSymbol": "ALKEM.NS",
+    "name": "Alkem Laboratories Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE540L01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ABDL",
+    "yahooSymbol": "ABDL.NS",
+    "name": "Allied Blenders and Distillers Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE552Z01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ARE&M",
+    "yahooSymbol": "ARE&M.NS",
+    "name": "Amara Raja Energy & Mobility Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE885A01032",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AMBER",
+    "yahooSymbol": "AMBER.NS",
+    "name": "Amber Enterprises India Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE371P01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "yahooSymbol": "AMBUJACEM.NS",
+    "name": "Ambuja Cements Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE079A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ANANDRATHI",
+    "yahooSymbol": "ANANDRATHI.NS",
+    "name": "Anand Rathi Wealth Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE463V01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ANANTRAJ",
+    "yahooSymbol": "ANANTRAJ.NS",
+    "name": "Anant Raj Ltd.",
+    "sector": "Realty",
+    "isin": "INE242C01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ANGELONE",
+    "yahooSymbol": "ANGELONE.NS",
+    "name": "Angel One Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE732I01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ANTHEM",
+    "yahooSymbol": "ANTHEM.NS",
+    "name": "Anthem Biosciences Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE0CZ201020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ANURAS",
+    "yahooSymbol": "ANURAS.NS",
+    "name": "Anupam Rasayan India Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE930P01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "APARINDS",
+    "yahooSymbol": "APARINDS.NS",
+    "name": "Apar Industries Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE372A01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "yahooSymbol": "APOLLOHOSP.NS",
+    "name": "Apollo Hospitals Enterprise Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE437A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "APOLLOTYRE",
+    "yahooSymbol": "APOLLOTYRE.NS",
+    "name": "Apollo Tyres Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE438A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "APTUS",
+    "yahooSymbol": "APTUS.NS",
+    "name": "Aptus Value Housing Finance India Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE852O01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ASAHIINDIA",
+    "yahooSymbol": "ASAHIINDIA.NS",
+    "name": "Asahi India Glass Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE439A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ASHOKLEY",
+    "yahooSymbol": "ASHOKLEY.NS",
+    "name": "Ashok Leyland Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE208A01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "yahooSymbol": "ASIANPAINT.NS",
+    "name": "Asian Paints Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE021A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ASTERDM",
+    "yahooSymbol": "ASTERDM.NS",
+    "name": "Aster DM Healthcare Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE914M01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ASTRAL",
+    "yahooSymbol": "ASTRAL.NS",
+    "name": "Astral Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE006I01046",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ATHERENERG",
+    "yahooSymbol": "ATHERENERG.NS",
+    "name": "Ather Energy Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE0LEZ01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ATUL",
+    "yahooSymbol": "ATUL.NS",
+    "name": "Atul Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE100A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "yahooSymbol": "AUROPHARMA.NS",
+    "name": "Aurobindo Pharma Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE406A01037",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AIIL",
+    "yahooSymbol": "AIIL.NS",
+    "name": "Authum Investment & Infrastructure Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE206F01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DMART",
+    "yahooSymbol": "DMART.NS",
+    "name": "Avenue Supermarts Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE192R01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "AXISBANK",
+    "yahooSymbol": "AXISBANK.NS",
+    "name": "Axis Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE238A01034",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BEML",
+    "yahooSymbol": "BEML.NS",
+    "name": "BEML Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE258A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BLS",
+    "yahooSymbol": "BLS.NS",
+    "name": "BLS International Services Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE153T01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BSE",
+    "yahooSymbol": "BSE.NS",
+    "name": "BSE Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE118H01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "yahooSymbol": "BAJAJ-AUTO.NS",
+    "name": "Bajaj Auto Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE917I01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "yahooSymbol": "BAJFINANCE.NS",
+    "name": "Bajaj Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE296A01032",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "yahooSymbol": "BAJAJFINSV.NS",
+    "name": "Bajaj Finserv Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE918I01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BAJAJHLDNG",
+    "yahooSymbol": "BAJAJHLDNG.NS",
+    "name": "Bajaj Holdings & Investment Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE118A01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BAJAJHFL",
+    "yahooSymbol": "BAJAJHFL.NS",
+    "name": "Bajaj Housing Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE377Y01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BALKRISIND",
+    "yahooSymbol": "BALKRISIND.NS",
+    "name": "Balkrishna Industries Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE787D01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BALRAMCHIN",
+    "yahooSymbol": "BALRAMCHIN.NS",
+    "name": "Balrampur Chini Mills Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE119A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BANDHANBNK",
+    "yahooSymbol": "BANDHANBNK.NS",
+    "name": "Bandhan Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE545U01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BANKBARODA",
+    "yahooSymbol": "BANKBARODA.NS",
+    "name": "Bank of Baroda",
+    "sector": "Financial Services",
+    "isin": "INE028A01039",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BANKINDIA",
+    "yahooSymbol": "BANKINDIA.NS",
+    "name": "Bank of India",
+    "sector": "Financial Services",
+    "isin": "INE084A01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MAHABANK",
+    "yahooSymbol": "MAHABANK.NS",
+    "name": "Bank of Maharashtra",
+    "sector": "Financial Services",
+    "isin": "INE457A01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BATAINDIA",
+    "yahooSymbol": "BATAINDIA.NS",
+    "name": "Bata India Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE176A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BAYERCROP",
+    "yahooSymbol": "BAYERCROP.NS",
+    "name": "Bayer Cropscience Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE462A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BELRISE",
+    "yahooSymbol": "BELRISE.NS",
+    "name": "Belrise Industries Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE894V01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "yahooSymbol": "BERGEPAINT.NS",
+    "name": "Berger Paints India Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE463A01038",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BDL",
+    "yahooSymbol": "BDL.NS",
+    "name": "Bharat Dynamics Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE171Z01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BEL",
+    "yahooSymbol": "BEL.NS",
+    "name": "Bharat Electronics Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE263A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BHARATFORG",
+    "yahooSymbol": "BHARATFORG.NS",
+    "name": "Bharat Forge Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE465A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BHEL",
+    "yahooSymbol": "BHEL.NS",
+    "name": "Bharat Heavy Electricals Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE257A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BPCL",
+    "yahooSymbol": "BPCL.NS",
+    "name": "Bharat Petroleum Corporation Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE029A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "yahooSymbol": "BHARTIARTL.NS",
+    "name": "Bharti Airtel Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE397D01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BHARTIHEXA",
+    "yahooSymbol": "BHARTIHEXA.NS",
+    "name": "Bharti Hexacom Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE343G01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BIKAJI",
+    "yahooSymbol": "BIKAJI.NS",
+    "name": "Bikaji Foods International Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE00E101023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GROWW",
+    "yahooSymbol": "GROWW.NS",
+    "name": "Billionbrains Garage Ventures Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE0HOQ01053",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BIOCON",
+    "yahooSymbol": "BIOCON.NS",
+    "name": "Biocon Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE376G01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BSOFT",
+    "yahooSymbol": "BSOFT.NS",
+    "name": "Birlasoft Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE836A01035",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BLUEDART",
+    "yahooSymbol": "BLUEDART.NS",
+    "name": "Blue Dart Express Ltd.",
+    "sector": "Services",
+    "isin": "INE233B01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BLUEJET",
+    "yahooSymbol": "BLUEJET.NS",
+    "name": "Blue Jet Healthcare Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE0KBH01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BLUESTARCO",
+    "yahooSymbol": "BLUESTARCO.NS",
+    "name": "Blue Star Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE472A01039",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BBTC",
+    "yahooSymbol": "BBTC.NS",
+    "name": "Bombay Burmah Trading Corporation Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE050A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "yahooSymbol": "BOSCHLTD.NS",
+    "name": "Bosch Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE323A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FIRSTCRY",
+    "yahooSymbol": "FIRSTCRY.NS",
+    "name": "Brainbees Solutions Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE02RE01045",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BRIGADE",
+    "yahooSymbol": "BRIGADE.NS",
+    "name": "Brigade Enterprises Ltd.",
+    "sector": "Realty",
+    "isin": "INE791I01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "BRITANNIA",
+    "yahooSymbol": "BRITANNIA.NS",
+    "name": "Britannia Industries Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE216A01030",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MAPMYINDIA",
+    "yahooSymbol": "MAPMYINDIA.NS",
+    "name": "C.E. Info Systems Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE0BV301023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CCL",
+    "yahooSymbol": "CCL.NS",
+    "name": "CCL Products (I) Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE421D01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CESC",
+    "yahooSymbol": "CESC.NS",
+    "name": "CESC Ltd.",
+    "sector": "Power",
+    "isin": "INE486A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CGPOWER",
+    "yahooSymbol": "CGPOWER.NS",
+    "name": "CG Power and Industrial Solutions Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE067A01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CIEINDIA",
+    "yahooSymbol": "CIEINDIA.NS",
+    "name": "CIE Automotive India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE536H01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CRISIL",
+    "yahooSymbol": "CRISIL.NS",
+    "name": "CRISIL Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE007A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CANFINHOME",
+    "yahooSymbol": "CANFINHOME.NS",
+    "name": "Can Fin Homes Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE477A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CANBK",
+    "yahooSymbol": "CANBK.NS",
+    "name": "Canara Bank",
+    "sector": "Financial Services",
+    "isin": "INE476A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CANHLIFE",
+    "yahooSymbol": "CANHLIFE.NS",
+    "name": "Canara HSBC Life Insurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE01TY01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CAPLIPOINT",
+    "yahooSymbol": "CAPLIPOINT.NS",
+    "name": "Caplin Point Laboratories Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE475E01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CGCL",
+    "yahooSymbol": "CGCL.NS",
+    "name": "Capri Global Capital Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE180C01042",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CARBORUNIV",
+    "yahooSymbol": "CARBORUNIV.NS",
+    "name": "Carborundum Universal Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE120A01034",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CARTRADE",
+    "yahooSymbol": "CARTRADE.NS",
+    "name": "Cartrade Tech Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE290S01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CASTROLIND",
+    "yahooSymbol": "CASTROLIND.NS",
+    "name": "Castrol India Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE172A01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CEATLTD",
+    "yahooSymbol": "CEATLTD.NS",
+    "name": "Ceat Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE482A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CEMPRO",
+    "yahooSymbol": "CEMPRO.NS",
+    "name": "Cemindia Projects Ltd.",
+    "sector": "Construction",
+    "isin": "INE686A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CENTRALBK",
+    "yahooSymbol": "CENTRALBK.NS",
+    "name": "Central Bank of India",
+    "sector": "Financial Services",
+    "isin": "INE483A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CDSL",
+    "yahooSymbol": "CDSL.NS",
+    "name": "Central Depository Services (India) Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE736A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CHALET",
+    "yahooSymbol": "CHALET.NS",
+    "name": "Chalet Hotels Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE427F01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CHAMBLFERT",
+    "yahooSymbol": "CHAMBLFERT.NS",
+    "name": "Chambal Fertilizers & Chemicals Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE085A01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CHENNPETRO",
+    "yahooSymbol": "CHENNPETRO.NS",
+    "name": "Chennai Petroleum Corporation Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE178A01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CHOICEIN",
+    "yahooSymbol": "CHOICEIN.NS",
+    "name": "Choice International Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE102B01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CHOLAHLDNG",
+    "yahooSymbol": "CHOLAHLDNG.NS",
+    "name": "Cholamandalam Financial Holdings Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE149A01033",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "yahooSymbol": "CHOLAFIN.NS",
+    "name": "Cholamandalam Investment and Finance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE121A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CIPLA",
+    "yahooSymbol": "CIPLA.NS",
+    "name": "Cipla Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE059A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CUB",
+    "yahooSymbol": "CUB.NS",
+    "name": "City Union Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE491A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CLEAN",
+    "yahooSymbol": "CLEAN.NS",
+    "name": "Clean Science and Technology Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE227W01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "COALINDIA",
+    "yahooSymbol": "COALINDIA.NS",
+    "name": "Coal India Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE522F01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "COCHINSHIP",
+    "yahooSymbol": "COCHINSHIP.NS",
+    "name": "Cochin Shipyard Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE704P01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "COFORGE",
+    "yahooSymbol": "COFORGE.NS",
+    "name": "Coforge Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE591G01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "COHANCE",
+    "yahooSymbol": "COHANCE.NS",
+    "name": "Cohance Lifesciences Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE03QK01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "COLPAL",
+    "yahooSymbol": "COLPAL.NS",
+    "name": "Colgate Palmolive (India) Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE259A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CAMS",
+    "yahooSymbol": "CAMS.NS",
+    "name": "Computer Age Management Services Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE596I01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CONCORDBIO",
+    "yahooSymbol": "CONCORDBIO.NS",
+    "name": "Concord Biotech Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE338H01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CONCOR",
+    "yahooSymbol": "CONCOR.NS",
+    "name": "Container Corporation of India Ltd.",
+    "sector": "Services",
+    "isin": "INE111A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "COROMANDEL",
+    "yahooSymbol": "COROMANDEL.NS",
+    "name": "Coromandel International Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE169A01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CRAFTSMAN",
+    "yahooSymbol": "CRAFTSMAN.NS",
+    "name": "Craftsman Automation Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE00LO01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CREDITACC",
+    "yahooSymbol": "CREDITACC.NS",
+    "name": "CreditAccess Grameen Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE741K01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CROMPTON",
+    "yahooSymbol": "CROMPTON.NS",
+    "name": "Crompton Greaves Consumer Electricals Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE299U01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "yahooSymbol": "CUMMINSIND.NS",
+    "name": "Cummins India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE298A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "CYIENT",
+    "yahooSymbol": "CYIENT.NS",
+    "name": "Cyient Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE136B01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DCMSHRIRAM",
+    "yahooSymbol": "DCMSHRIRAM.NS",
+    "name": "DCM Shriram Ltd.",
+    "sector": "Diversified",
+    "isin": "INE499A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DLF",
+    "yahooSymbol": "DLF.NS",
+    "name": "DLF Ltd.",
+    "sector": "Realty",
+    "isin": "INE271C01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DOMS",
+    "yahooSymbol": "DOMS.NS",
+    "name": "DOMS Industries Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE321T01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DABUR",
+    "yahooSymbol": "DABUR.NS",
+    "name": "Dabur India Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE016A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DALBHARAT",
+    "yahooSymbol": "DALBHARAT.NS",
+    "name": "Dalmia Bharat Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE00R701025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DATAPATTNS",
+    "yahooSymbol": "DATAPATTNS.NS",
+    "name": "Data Patterns (India) Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE0IX101010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DEEPAKFERT",
+    "yahooSymbol": "DEEPAKFERT.NS",
+    "name": "Deepak Fertilisers & Petrochemicals Corp. Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE501A01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DEEPAKNTR",
+    "yahooSymbol": "DEEPAKNTR.NS",
+    "name": "Deepak Nitrite Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE288B01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DELHIVERY",
+    "yahooSymbol": "DELHIVERY.NS",
+    "name": "Delhivery Ltd.",
+    "sector": "Services",
+    "isin": "INE148O01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DEVYANI",
+    "yahooSymbol": "DEVYANI.NS",
+    "name": "Devyani International Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE872J01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DIVISLAB",
+    "yahooSymbol": "DIVISLAB.NS",
+    "name": "Divi's Laboratories Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE361B01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DIXON",
+    "yahooSymbol": "DIXON.NS",
+    "name": "Dixon Technologies (India) Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE935N01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LALPATHLAB",
+    "yahooSymbol": "LALPATHLAB.NS",
+    "name": "Dr. Lal Path Labs Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE600L01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "DRREDDY",
+    "yahooSymbol": "DRREDDY.NS",
+    "name": "Dr. Reddy's Laboratories Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE089A01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "EIDPARRY",
+    "yahooSymbol": "EIDPARRY.NS",
+    "name": "E.I.D. Parry (India) Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE126A01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "EIHOTEL",
+    "yahooSymbol": "EIHOTEL.NS",
+    "name": "EIH Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE230A01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "EICHERMOT",
+    "yahooSymbol": "EICHERMOT.NS",
+    "name": "Eicher Motors Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE066A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ELECON",
+    "yahooSymbol": "ELECON.NS",
+    "name": "Elecon Engineering Co. Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE205B01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ELGIEQUIP",
+    "yahooSymbol": "ELGIEQUIP.NS",
+    "name": "Elgi Equipments Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE285A01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "EMAMILTD",
+    "yahooSymbol": "EMAMILTD.NS",
+    "name": "Emami Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE548C01032",
+    "series": "EQ"
+  },
+  {
+    "symbol": "EMCURE",
+    "yahooSymbol": "EMCURE.NS",
+    "name": "Emcure Pharmaceuticals Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE168P01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "EMMVEE",
+    "yahooSymbol": "EMMVEE.NS",
+    "name": "Emmvee Photovoltaic Power Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE1C6T01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ENDURANCE",
+    "yahooSymbol": "ENDURANCE.NS",
+    "name": "Endurance Technologies Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE913H01037",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ENGINERSIN",
+    "yahooSymbol": "ENGINERSIN.NS",
+    "name": "Engineers India Ltd.",
+    "sector": "Construction",
+    "isin": "INE510A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ERIS",
+    "yahooSymbol": "ERIS.NS",
+    "name": "Eris Lifesciences Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE406M01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ESCORTS",
+    "yahooSymbol": "ESCORTS.NS",
+    "name": "Escorts Kubota Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE042A01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ETERNAL",
+    "yahooSymbol": "ETERNAL.NS",
+    "name": "Eternal Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE758T01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "EXIDEIND",
+    "yahooSymbol": "EXIDEIND.NS",
+    "name": "Exide Industries Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE302A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NYKAA",
+    "yahooSymbol": "NYKAA.NS",
+    "name": "FSN E-Commerce Ventures Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE388Y01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FEDERALBNK",
+    "yahooSymbol": "FEDERALBNK.NS",
+    "name": "Federal Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE171A01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FACT",
+    "yahooSymbol": "FACT.NS",
+    "name": "Fertilisers and Chemicals Travancore Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE188A01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FINCABLES",
+    "yahooSymbol": "FINCABLES.NS",
+    "name": "Finolex Cables Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE235A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FSL",
+    "yahooSymbol": "FSL.NS",
+    "name": "Firstsource Solutions Ltd.",
+    "sector": "Services",
+    "isin": "INE684F01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FIVESTAR",
+    "yahooSymbol": "FIVESTAR.NS",
+    "name": "Five-Star Business Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE128S01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FORCEMOT",
+    "yahooSymbol": "FORCEMOT.NS",
+    "name": "Force Motors Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE451A01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FORTIS",
+    "yahooSymbol": "FORTIS.NS",
+    "name": "Fortis Healthcare Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE061F01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GAIL",
+    "yahooSymbol": "GAIL.NS",
+    "name": "GAIL (India) Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE129A01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GVT&D",
+    "yahooSymbol": "GVT&D.NS",
+    "name": "GE Vernova T&D India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE200A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GMRAIRPORT",
+    "yahooSymbol": "GMRAIRPORT.NS",
+    "name": "GMR Airports Ltd.",
+    "sector": "Services",
+    "isin": "INE776C01039",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GABRIEL",
+    "yahooSymbol": "GABRIEL.NS",
+    "name": "Gabriel India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE524A01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GALLANTT",
+    "yahooSymbol": "GALLANTT.NS",
+    "name": "Gallantt Ispat Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE297H01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GRSE",
+    "yahooSymbol": "GRSE.NS",
+    "name": "Garden Reach Shipbuilders & Engineers Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE382Z01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GICRE",
+    "yahooSymbol": "GICRE.NS",
+    "name": "General Insurance Corporation of India",
+    "sector": "Financial Services",
+    "isin": "INE481Y01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GILLETTE",
+    "yahooSymbol": "GILLETTE.NS",
+    "name": "Gillette India Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE322A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GLAND",
+    "yahooSymbol": "GLAND.NS",
+    "name": "Gland Pharma Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE068V01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GLAXO",
+    "yahooSymbol": "GLAXO.NS",
+    "name": "Glaxosmithkline Pharmaceuticals Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE159A01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GLENMARK",
+    "yahooSymbol": "GLENMARK.NS",
+    "name": "Glenmark Pharmaceuticals Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE935A01035",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MEDANTA",
+    "yahooSymbol": "MEDANTA.NS",
+    "name": "Global Health Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE474Q01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GODIGIT",
+    "yahooSymbol": "GODIGIT.NS",
+    "name": "Go Digit General Insurance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE03JT01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GPIL",
+    "yahooSymbol": "GPIL.NS",
+    "name": "Godawari Power & Ispat Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE177H01039",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GODFRYPHLP",
+    "yahooSymbol": "GODFRYPHLP.NS",
+    "name": "Godfrey Phillips India Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE260B01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GODREJCP",
+    "yahooSymbol": "GODREJCP.NS",
+    "name": "Godrej Consumer Products Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE102D01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GODREJIND",
+    "yahooSymbol": "GODREJIND.NS",
+    "name": "Godrej Industries Ltd.",
+    "sector": "Diversified",
+    "isin": "INE233A01035",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GODREJPROP",
+    "yahooSymbol": "GODREJPROP.NS",
+    "name": "Godrej Properties Ltd.",
+    "sector": "Realty",
+    "isin": "INE484J01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GRANULES",
+    "yahooSymbol": "GRANULES.NS",
+    "name": "Granules India Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE101D01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GRAPHITE",
+    "yahooSymbol": "GRAPHITE.NS",
+    "name": "Graphite India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE371A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GRASIM",
+    "yahooSymbol": "GRASIM.NS",
+    "name": "Grasim Industries Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE047A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GRAVITA",
+    "yahooSymbol": "GRAVITA.NS",
+    "name": "Gravita India Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE024L01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GESHIP",
+    "yahooSymbol": "GESHIP.NS",
+    "name": "Great Eastern Shipping Co. Ltd.",
+    "sector": "Services",
+    "isin": "INE017A01032",
+    "series": "EQ"
+  },
+  {
+    "symbol": "FLUOROCHEM",
+    "yahooSymbol": "FLUOROCHEM.NS",
+    "name": "Gujarat Fluorochemicals Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE09N301011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "GMDCLTD",
+    "yahooSymbol": "GMDCLTD.NS",
+    "name": "Gujarat Mineral Development Corporation Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE131A01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HEG",
+    "yahooSymbol": "HEG.NS",
+    "name": "H.E.G. Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE545A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HBLENGINE",
+    "yahooSymbol": "HBLENGINE.NS",
+    "name": "HBL Engineering Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE292B01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HCLTECH",
+    "yahooSymbol": "HCLTECH.NS",
+    "name": "HCL Technologies Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE860A01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HDBFS",
+    "yahooSymbol": "HDBFS.NS",
+    "name": "HDB Financial Services Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE756I01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HDFCAMC",
+    "yahooSymbol": "HDFCAMC.NS",
+    "name": "HDFC Asset Management Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE127D01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HDFCBANK",
+    "yahooSymbol": "HDFCBANK.NS",
+    "name": "HDFC Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE040A01034",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "yahooSymbol": "HDFCLIFE.NS",
+    "name": "HDFC Life Insurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE795G01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HFCL",
+    "yahooSymbol": "HFCL.NS",
+    "name": "HFCL Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE548A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HAVELLS",
+    "yahooSymbol": "HAVELLS.NS",
+    "name": "Havells India Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE176B01034",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "yahooSymbol": "HEROMOTOCO.NS",
+    "name": "Hero MotoCorp Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE158A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HEXT",
+    "yahooSymbol": "HEXT.NS",
+    "name": "Hexaware Technologies Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE093A01041",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HSCL",
+    "yahooSymbol": "HSCL.NS",
+    "name": "Himadri Speciality Chemical Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE019C01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HINDALCO",
+    "yahooSymbol": "HINDALCO.NS",
+    "name": "Hindalco Industries Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE038A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HAL",
+    "yahooSymbol": "HAL.NS",
+    "name": "Hindustan Aeronautics Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE066F01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HINDCOPPER",
+    "yahooSymbol": "HINDCOPPER.NS",
+    "name": "Hindustan Copper Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE531E01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HINDPETRO",
+    "yahooSymbol": "HINDPETRO.NS",
+    "name": "Hindustan Petroleum Corporation Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE094A01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "yahooSymbol": "HINDUNILVR.NS",
+    "name": "Hindustan Unilever Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE030A01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HINDZINC",
+    "yahooSymbol": "HINDZINC.NS",
+    "name": "Hindustan Zinc Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE267A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "POWERINDIA",
+    "yahooSymbol": "POWERINDIA.NS",
+    "name": "Hitachi Energy India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE07Y701011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HOMEFIRST",
+    "yahooSymbol": "HOMEFIRST.NS",
+    "name": "Home First Finance Company India Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE481N01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HONASA",
+    "yahooSymbol": "HONASA.NS",
+    "name": "Honasa Consumer Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE0J5401028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HONAUT",
+    "yahooSymbol": "HONAUT.NS",
+    "name": "Honeywell Automation India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE671A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HUDCO",
+    "yahooSymbol": "HUDCO.NS",
+    "name": "Housing & Urban Development Corporation Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE031A01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "HYUNDAI",
+    "yahooSymbol": "HYUNDAI.NS",
+    "name": "Hyundai Motor India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE0V6F01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ICICIBANK",
+    "yahooSymbol": "ICICIBANK.NS",
+    "name": "ICICI Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE090A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ICICIGI",
+    "yahooSymbol": "ICICIGI.NS",
+    "name": "ICICI Lombard General Insurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE765G01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ICICIAMC",
+    "yahooSymbol": "ICICIAMC.NS",
+    "name": "ICICI Prudential Asset Management Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE346A01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ICICIPRULI",
+    "yahooSymbol": "ICICIPRULI.NS",
+    "name": "ICICI Prudential Life Insurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE726G01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IDBI",
+    "yahooSymbol": "IDBI.NS",
+    "name": "IDBI Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE008A01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "yahooSymbol": "IDFCFIRSTB.NS",
+    "name": "IDFC First Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE092T01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IFCI",
+    "yahooSymbol": "IFCI.NS",
+    "name": "IFCI Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE039A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IIFL",
+    "yahooSymbol": "IIFL.NS",
+    "name": "IIFL Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE530B01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IRB",
+    "yahooSymbol": "IRB.NS",
+    "name": "IRB Infrastructure Developers Ltd.",
+    "sector": "Construction",
+    "isin": "INE821I01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IRCON",
+    "yahooSymbol": "IRCON.NS",
+    "name": "IRCON International Ltd.",
+    "sector": "Construction",
+    "isin": "INE962Y01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ITCHOTELS",
+    "yahooSymbol": "ITCHOTELS.NS",
+    "name": "ITC Hotels Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE379A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ITC",
+    "yahooSymbol": "ITC.NS",
+    "name": "ITC Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE154A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ITI",
+    "yahooSymbol": "ITI.NS",
+    "name": "ITI Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE248A01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDGN",
+    "yahooSymbol": "INDGN.NS",
+    "name": "Indegene Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE065X01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDIACEM",
+    "yahooSymbol": "INDIACEM.NS",
+    "name": "India Cements Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE383A01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDIAMART",
+    "yahooSymbol": "INDIAMART.NS",
+    "name": "Indiamart Intermesh Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE933S01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDIANB",
+    "yahooSymbol": "INDIANB.NS",
+    "name": "Indian Bank",
+    "sector": "Financial Services",
+    "isin": "INE562A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IEX",
+    "yahooSymbol": "IEX.NS",
+    "name": "Indian Energy Exchange Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE022Q01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDHOTEL",
+    "yahooSymbol": "INDHOTEL.NS",
+    "name": "Indian Hotels Co. Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE053A01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IOC",
+    "yahooSymbol": "IOC.NS",
+    "name": "Indian Oil Corporation Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE242A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IOB",
+    "yahooSymbol": "IOB.NS",
+    "name": "Indian Overseas Bank",
+    "sector": "Financial Services",
+    "isin": "INE565A01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IRCTC",
+    "yahooSymbol": "IRCTC.NS",
+    "name": "Indian Railway Catering And Tourism Corporation Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE335Y01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IRFC",
+    "yahooSymbol": "IRFC.NS",
+    "name": "Indian Railway Finance Corporation Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE053F01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IREDA",
+    "yahooSymbol": "IREDA.NS",
+    "name": "Indian Renewable Energy Development Agency Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE202E01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IGL",
+    "yahooSymbol": "IGL.NS",
+    "name": "Indraprastha Gas Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE203G01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDUSTOWER",
+    "yahooSymbol": "INDUSTOWER.NS",
+    "name": "Indus Towers Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE121J01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "yahooSymbol": "INDUSINDBK.NS",
+    "name": "IndusInd Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE095A01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NAUKRI",
+    "yahooSymbol": "NAUKRI.NS",
+    "name": "Info Edge (India) Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE663F01032",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INFY",
+    "yahooSymbol": "INFY.NS",
+    "name": "Infosys Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE009A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INOXWIND",
+    "yahooSymbol": "INOXWIND.NS",
+    "name": "Inox Wind Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE066P01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INTELLECT",
+    "yahooSymbol": "INTELLECT.NS",
+    "name": "Intellect Design Arena Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE306R01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "INDIGO",
+    "yahooSymbol": "INDIGO.NS",
+    "name": "InterGlobe Aviation Ltd.",
+    "sector": "Services",
+    "isin": "INE646L01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IGIL",
+    "yahooSymbol": "IGIL.NS",
+    "name": "International Gemological Institute Ltd.",
+    "sector": "Services",
+    "isin": "INE0Q9301021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IKS",
+    "yahooSymbol": "IKS.NS",
+    "name": "Inventurus Knowledge Solutions Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE115Q01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IPCALAB",
+    "yahooSymbol": "IPCALAB.NS",
+    "name": "Ipca Laboratories Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE571A01038",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JBCHEPHARM",
+    "yahooSymbol": "JBCHEPHARM.NS",
+    "name": "J.B. Chemicals & Pharmaceuticals Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE572A01036",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JKCEMENT",
+    "yahooSymbol": "JKCEMENT.NS",
+    "name": "J.K. Cement Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE823G01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JBMA",
+    "yahooSymbol": "JBMA.NS",
+    "name": "JBM Auto Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE927D01051",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JKTYRE",
+    "yahooSymbol": "JKTYRE.NS",
+    "name": "JK Tyre & Industries Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE573A01042",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JMFINANCIL",
+    "yahooSymbol": "JMFINANCIL.NS",
+    "name": "JM Financial Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE780C01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JSWCEMENT",
+    "yahooSymbol": "JSWCEMENT.NS",
+    "name": "JSW Cement Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE718I01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JSWDULUX",
+    "yahooSymbol": "JSWDULUX.NS",
+    "name": "JSW Dulux Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE133A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JSWENERGY",
+    "yahooSymbol": "JSWENERGY.NS",
+    "name": "JSW Energy Ltd.",
+    "sector": "Power",
+    "isin": "INE121E01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JSWINFRA",
+    "yahooSymbol": "JSWINFRA.NS",
+    "name": "JSW Infrastructure Ltd.",
+    "sector": "Services",
+    "isin": "INE880J01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "yahooSymbol": "JSWSTEEL.NS",
+    "name": "JSW Steel Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE019A01038",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JAINREC",
+    "yahooSymbol": "JAINREC.NS",
+    "name": "Jain Resource Recycling Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE0YD401026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JPPOWER",
+    "yahooSymbol": "JPPOWER.NS",
+    "name": "Jaiprakash Power Ventures Ltd.",
+    "sector": "Power",
+    "isin": "INE351F01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "J&KBANK",
+    "yahooSymbol": "J&KBANK.NS",
+    "name": "Jammu & Kashmir Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE168A01041",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JINDALSAW",
+    "yahooSymbol": "JINDALSAW.NS",
+    "name": "Jindal Saw Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE324A01032",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JSL",
+    "yahooSymbol": "JSL.NS",
+    "name": "Jindal Stainless Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE220G01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "yahooSymbol": "JINDALSTEL.NS",
+    "name": "Jindal Steel Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE749A01030",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JIOFIN",
+    "yahooSymbol": "JIOFIN.NS",
+    "name": "Jio Financial Services Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE758E01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JUBLFOOD",
+    "yahooSymbol": "JUBLFOOD.NS",
+    "name": "Jubilant Foodworks Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE797F01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JUBLINGREA",
+    "yahooSymbol": "JUBLINGREA.NS",
+    "name": "Jubilant Ingrevia Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE0BY001018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JUBLPHARMA",
+    "yahooSymbol": "JUBLPHARMA.NS",
+    "name": "Jubilant Pharmova Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE700A01033",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JWL",
+    "yahooSymbol": "JWL.NS",
+    "name": "Jupiter Wagons Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE209L01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "JYOTICNC",
+    "yahooSymbol": "JYOTICNC.NS",
+    "name": "Jyoti CNC Automation Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE980O01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KPRMILL",
+    "yahooSymbol": "KPRMILL.NS",
+    "name": "K.P.R. Mill Ltd.",
+    "sector": "Textiles",
+    "isin": "INE930H01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KEI",
+    "yahooSymbol": "KEI.NS",
+    "name": "KEI Industries Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE878B01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KPITTECH",
+    "yahooSymbol": "KPITTECH.NS",
+    "name": "KPIT Technologies Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE04I401011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KAJARIACER",
+    "yahooSymbol": "KAJARIACER.NS",
+    "name": "Kajaria Ceramics Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE217B01036",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KPIL",
+    "yahooSymbol": "KPIL.NS",
+    "name": "Kalpataru Projects International Ltd.",
+    "sector": "Construction",
+    "isin": "INE220B01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KALYANKJIL",
+    "yahooSymbol": "KALYANKJIL.NS",
+    "name": "Kalyan Jewellers India Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE303R01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KARURVYSYA",
+    "yahooSymbol": "KARURVYSYA.NS",
+    "name": "Karur Vysya Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE036D01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KAYNES",
+    "yahooSymbol": "KAYNES.NS",
+    "name": "Kaynes Technology India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE918Z01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KEC",
+    "yahooSymbol": "KEC.NS",
+    "name": "Kec International Ltd.",
+    "sector": "Construction",
+    "isin": "INE389H01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KFINTECH",
+    "yahooSymbol": "KFINTECH.NS",
+    "name": "Kfin Technologies Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE138Y01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KIRLOSENG",
+    "yahooSymbol": "KIRLOSENG.NS",
+    "name": "Kirloskar Oil Eng Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE146L01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "yahooSymbol": "KOTAKBANK.NS",
+    "name": "Kotak Mahindra Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE237A01036",
+    "series": "EQ"
+  },
+  {
+    "symbol": "KIMS",
+    "yahooSymbol": "KIMS.NS",
+    "name": "Krishna Institute of Medical Sciences Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE967H01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LTF",
+    "yahooSymbol": "LTF.NS",
+    "name": "L&T Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE498L01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LTTS",
+    "yahooSymbol": "LTTS.NS",
+    "name": "L&T Technology Services Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE010V01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LGEINDIA",
+    "yahooSymbol": "LGEINDIA.NS",
+    "name": "LG Electronics India Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE324D01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LICHSGFIN",
+    "yahooSymbol": "LICHSGFIN.NS",
+    "name": "LIC Housing Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE115A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LTFOODS",
+    "yahooSymbol": "LTFOODS.NS",
+    "name": "LT Foods Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE818H01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LTM",
+    "yahooSymbol": "LTM.NS",
+    "name": "LTM Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE214T01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LT",
+    "yahooSymbol": "LT.NS",
+    "name": "Larsen & Toubro Ltd.",
+    "sector": "Construction",
+    "isin": "INE018A01030",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LATENTVIEW",
+    "yahooSymbol": "LATENTVIEW.NS",
+    "name": "Latent View Analytics Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE0I7C01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "yahooSymbol": "LAURUSLABS.NS",
+    "name": "Laurus Labs Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE947Q01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "THELEELA",
+    "yahooSymbol": "THELEELA.NS",
+    "name": "Leela Palaces Hotels & Resorts Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE0AQ201015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LEMONTREE",
+    "yahooSymbol": "LEMONTREE.NS",
+    "name": "Lemon Tree Hotels Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE970X01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LENSKART",
+    "yahooSymbol": "LENSKART.NS",
+    "name": "Lenskart Solutions Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE956O01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LICI",
+    "yahooSymbol": "LICI.NS",
+    "name": "Life Insurance Corporation of India",
+    "sector": "Financial Services",
+    "isin": "INE0J1Y01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LINDEINDIA",
+    "yahooSymbol": "LINDEINDIA.NS",
+    "name": "Linde India Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE473A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LLOYDSME",
+    "yahooSymbol": "LLOYDSME.NS",
+    "name": "Lloyds Metals And Energy Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE281B01032",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LODHA",
+    "yahooSymbol": "LODHA.NS",
+    "name": "Lodha Developers Ltd.",
+    "sector": "Realty",
+    "isin": "INE670K01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "LUPIN",
+    "yahooSymbol": "LUPIN.NS",
+    "name": "Lupin Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE326A01037",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MMTC",
+    "yahooSymbol": "MMTC.NS",
+    "name": "MMTC Ltd.",
+    "sector": "Services",
+    "isin": "INE123F01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MRF",
+    "yahooSymbol": "MRF.NS",
+    "name": "MRF Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE883A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MGL",
+    "yahooSymbol": "MGL.NS",
+    "name": "Mahanagar Gas Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE002S01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "M&MFIN",
+    "yahooSymbol": "M&MFIN.NS",
+    "name": "Mahindra & Mahindra Financial Services Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE774D01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "M&M",
+    "yahooSymbol": "M&M.NS",
+    "name": "Mahindra & Mahindra Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE101A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MANAPPURAM",
+    "yahooSymbol": "MANAPPURAM.NS",
+    "name": "Manappuram Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE522D01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MRPL",
+    "yahooSymbol": "MRPL.NS",
+    "name": "Mangalore Refinery & Petrochemicals Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE103A01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MANKIND",
+    "yahooSymbol": "MANKIND.NS",
+    "name": "Mankind Pharma Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE634S01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MARICO",
+    "yahooSymbol": "MARICO.NS",
+    "name": "Marico Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE196A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MARUTI",
+    "yahooSymbol": "MARUTI.NS",
+    "name": "Maruti Suzuki India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE585B01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MFSL",
+    "yahooSymbol": "MFSL.NS",
+    "name": "Max Financial Services Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE180A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "yahooSymbol": "MAXHEALTH.NS",
+    "name": "Max Healthcare Institute Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE027H01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MAZDOCK",
+    "yahooSymbol": "MAZDOCK.NS",
+    "name": "Mazagoan Dock Shipbuilders Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE249Z01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MEESHO",
+    "yahooSymbol": "MEESHO.NS",
+    "name": "Meesho Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE0VDM01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MINDACORP",
+    "yahooSymbol": "MINDACORP.NS",
+    "name": "Minda Corporation Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE842C01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MSUMI",
+    "yahooSymbol": "MSUMI.NS",
+    "name": "Motherson Sumi Wiring India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE0FS801015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MOTILALOFS",
+    "yahooSymbol": "MOTILALOFS.NS",
+    "name": "Motilal Oswal Financial Services Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE338I01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MPHASIS",
+    "yahooSymbol": "MPHASIS.NS",
+    "name": "MphasiS Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE356A01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MCX",
+    "yahooSymbol": "MCX.NS",
+    "name": "Multi Commodity Exchange of India Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE745G01043",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "yahooSymbol": "MUTHOOTFIN.NS",
+    "name": "Muthoot Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE414G01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NATCOPHARM",
+    "yahooSymbol": "NATCOPHARM.NS",
+    "name": "NATCO Pharma Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE987B01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NBCC",
+    "yahooSymbol": "NBCC.NS",
+    "name": "NBCC (India) Ltd.",
+    "sector": "Construction",
+    "isin": "INE095N01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NCC",
+    "yahooSymbol": "NCC.NS",
+    "name": "NCC Ltd.",
+    "sector": "Construction",
+    "isin": "INE868B01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NHPC",
+    "yahooSymbol": "NHPC.NS",
+    "name": "NHPC Ltd.",
+    "sector": "Power",
+    "isin": "INE848E01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NLCINDIA",
+    "yahooSymbol": "NLCINDIA.NS",
+    "name": "NLC India Ltd.",
+    "sector": "Power",
+    "isin": "INE589A01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NMDC",
+    "yahooSymbol": "NMDC.NS",
+    "name": "NMDC Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE584A01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NSLNISP",
+    "yahooSymbol": "NSLNISP.NS",
+    "name": "NMDC Steel Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE0NNS01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NTPCGREEN",
+    "yahooSymbol": "NTPCGREEN.NS",
+    "name": "NTPC Green Energy Ltd.",
+    "sector": "Power",
+    "isin": "INE0ONG01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NTPC",
+    "yahooSymbol": "NTPC.NS",
+    "name": "NTPC Ltd.",
+    "sector": "Power",
+    "isin": "INE733E01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NH",
+    "yahooSymbol": "NH.NS",
+    "name": "Narayana Hrudayalaya Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE410P01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NATIONALUM",
+    "yahooSymbol": "NATIONALUM.NS",
+    "name": "National Aluminium Co. Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE139A01034",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NAVA",
+    "yahooSymbol": "NAVA.NS",
+    "name": "Nava Ltd.",
+    "sector": "Power",
+    "isin": "INE725A01030",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NAVINFLUOR",
+    "yahooSymbol": "NAVINFLUOR.NS",
+    "name": "Navin Fluorine International Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE048G01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NESTLEIND",
+    "yahooSymbol": "NESTLEIND.NS",
+    "name": "Nestle India Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE239A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NETWEB",
+    "yahooSymbol": "NETWEB.NS",
+    "name": "Netweb Technologies India Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE0NT901020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NEULANDLAB",
+    "yahooSymbol": "NEULANDLAB.NS",
+    "name": "Neuland Laboratories Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE794A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NEWGEN",
+    "yahooSymbol": "NEWGEN.NS",
+    "name": "Newgen Software Technologies Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE619B01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "yahooSymbol": "NAM-INDIA.NS",
+    "name": "Nippon Life India Asset Management Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE298J01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NIVABUPA",
+    "yahooSymbol": "NIVABUPA.NS",
+    "name": "Niva Bupa Health Insurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE995S01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NUVAMA",
+    "yahooSymbol": "NUVAMA.NS",
+    "name": "Nuvama Wealth Management Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE531F01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NUVOCO",
+    "yahooSymbol": "NUVOCO.NS",
+    "name": "Nuvoco Vistas Corporation Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE118D01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "OBEROIRLTY",
+    "yahooSymbol": "OBEROIRLTY.NS",
+    "name": "Oberoi Realty Ltd.",
+    "sector": "Realty",
+    "isin": "INE093I01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ONGC",
+    "yahooSymbol": "ONGC.NS",
+    "name": "Oil & Natural Gas Corporation Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE213A01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "OIL",
+    "yahooSymbol": "OIL.NS",
+    "name": "Oil India Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE274J01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "OLAELEC",
+    "yahooSymbol": "OLAELEC.NS",
+    "name": "Ola Electric Mobility Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE0LXG01040",
+    "series": "EQ"
+  },
+  {
+    "symbol": "OLECTRA",
+    "yahooSymbol": "OLECTRA.NS",
+    "name": "Olectra Greentech Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE260D01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PAYTM",
+    "yahooSymbol": "PAYTM.NS",
+    "name": "One 97 Communications Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE982J01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ONESOURCE",
+    "yahooSymbol": "ONESOURCE.NS",
+    "name": "Onesource Specialty Pharma Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE013P01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "OFSS",
+    "yahooSymbol": "OFSS.NS",
+    "name": "Oracle Financial Services Software Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE881D01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "POLICYBZR",
+    "yahooSymbol": "POLICYBZR.NS",
+    "name": "PB Fintech Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE417T01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PCBL",
+    "yahooSymbol": "PCBL.NS",
+    "name": "PCBL Chemical Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE602A01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PGEL",
+    "yahooSymbol": "PGEL.NS",
+    "name": "PG Electroplast Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE457L01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PIIND",
+    "yahooSymbol": "PIIND.NS",
+    "name": "PI Industries Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE603J01030",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PNBHOUSING",
+    "yahooSymbol": "PNBHOUSING.NS",
+    "name": "PNB Housing Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE572E01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PTCIL",
+    "yahooSymbol": "PTCIL.NS",
+    "name": "PTC Industries Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE596F01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PVRINOX",
+    "yahooSymbol": "PVRINOX.NS",
+    "name": "PVR INOX Ltd.",
+    "sector": "Media Entertainment & Publication",
+    "isin": "INE191H01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PAGEIND",
+    "yahooSymbol": "PAGEIND.NS",
+    "name": "Page Industries Ltd.",
+    "sector": "Textiles",
+    "isin": "INE761H01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PARADEEP",
+    "yahooSymbol": "PARADEEP.NS",
+    "name": "Paradeep Phosphates Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE088F01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PATANJALI",
+    "yahooSymbol": "PATANJALI.NS",
+    "name": "Patanjali Foods Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE619A01035",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PERSISTENT",
+    "yahooSymbol": "PERSISTENT.NS",
+    "name": "Persistent Systems Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE262H01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PETRONET",
+    "yahooSymbol": "PETRONET.NS",
+    "name": "Petronet LNG Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE347G01014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PFIZER",
+    "yahooSymbol": "PFIZER.NS",
+    "name": "Pfizer Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE182A01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PHOENIXLTD",
+    "yahooSymbol": "PHOENIXLTD.NS",
+    "name": "Phoenix Mills Ltd.",
+    "sector": "Realty",
+    "isin": "INE211B01039",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PWL",
+    "yahooSymbol": "PWL.NS",
+    "name": "Physicswallah Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE0LP301011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PIDILITIND",
+    "yahooSymbol": "PIDILITIND.NS",
+    "name": "Pidilite Industries Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE318A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PINELABS",
+    "yahooSymbol": "PINELABS.NS",
+    "name": "Pine Labs Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE15B701018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PIRAMALFIN",
+    "yahooSymbol": "PIRAMALFIN.NS",
+    "name": "Piramal Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE202B01038",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PPLPHARMA",
+    "yahooSymbol": "PPLPHARMA.NS",
+    "name": "Piramal Pharma Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE0DK501011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "POLYMED",
+    "yahooSymbol": "POLYMED.NS",
+    "name": "Poly Medicure Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE205C01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "POLYCAB",
+    "yahooSymbol": "POLYCAB.NS",
+    "name": "Polycab India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE455K01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "POONAWALLA",
+    "yahooSymbol": "POONAWALLA.NS",
+    "name": "Poonawalla Fincorp Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE511C01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PFC",
+    "yahooSymbol": "PFC.NS",
+    "name": "Power Finance Corporation Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE134E01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "POWERGRID",
+    "yahooSymbol": "POWERGRID.NS",
+    "name": "Power Grid Corporation of India Ltd.",
+    "sector": "Power",
+    "isin": "INE752E01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PREMIERENE",
+    "yahooSymbol": "PREMIERENE.NS",
+    "name": "Premier Energies Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE0BS701011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PRESTIGE",
+    "yahooSymbol": "PRESTIGE.NS",
+    "name": "Prestige Estates Projects Ltd.",
+    "sector": "Realty",
+    "isin": "INE811K01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "PNB",
+    "yahooSymbol": "PNB.NS",
+    "name": "Punjab National Bank",
+    "sector": "Financial Services",
+    "isin": "INE160A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RRKABEL",
+    "yahooSymbol": "RRKABEL.NS",
+    "name": "R R Kabel Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE777K01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RBLBANK",
+    "yahooSymbol": "RBLBANK.NS",
+    "name": "RBL Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE976G01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RECLTD",
+    "yahooSymbol": "RECLTD.NS",
+    "name": "REC Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE020B01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RHIM",
+    "yahooSymbol": "RHIM.NS",
+    "name": "RHI MAGNESITA INDIA LTD.",
+    "sector": "Capital Goods",
+    "isin": "INE743M01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RITES",
+    "yahooSymbol": "RITES.NS",
+    "name": "RITES Ltd.",
+    "sector": "Construction",
+    "isin": "INE320J01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RADICO",
+    "yahooSymbol": "RADICO.NS",
+    "name": "Radico Khaitan Ltd",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE944F01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RVNL",
+    "yahooSymbol": "RVNL.NS",
+    "name": "Rail Vikas Nigam Ltd.",
+    "sector": "Construction",
+    "isin": "INE415G01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RAILTEL",
+    "yahooSymbol": "RAILTEL.NS",
+    "name": "Railtel Corporation Of India Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE0DD101019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RAINBOW",
+    "yahooSymbol": "RAINBOW.NS",
+    "name": "Rainbow Childrens Medicare Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE961O01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RKFORGE",
+    "yahooSymbol": "RKFORGE.NS",
+    "name": "Ramkrishna Forgings Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE399G01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "REDINGTON",
+    "yahooSymbol": "REDINGTON.NS",
+    "name": "Redington Ltd.",
+    "sector": "Services",
+    "isin": "INE891D01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RELIANCE",
+    "yahooSymbol": "RELIANCE.NS",
+    "name": "Reliance Industries Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "isin": "INE002A01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RPOWER",
+    "yahooSymbol": "RPOWER.NS",
+    "name": "Reliance Power Ltd.",
+    "sector": "Power",
+    "isin": "INE614G01033",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SBFC",
+    "yahooSymbol": "SBFC.NS",
+    "name": "SBFC Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE423Y01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SBICARD",
+    "yahooSymbol": "SBICARD.NS",
+    "name": "SBI Cards and Payment Services Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE018E01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SBILIFE",
+    "yahooSymbol": "SBILIFE.NS",
+    "name": "SBI Life Insurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE123W01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SJVN",
+    "yahooSymbol": "SJVN.NS",
+    "name": "SJVN Ltd.",
+    "sector": "Power",
+    "isin": "INE002L01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SRF",
+    "yahooSymbol": "SRF.NS",
+    "name": "SRF Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE647A01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SAGILITY",
+    "yahooSymbol": "SAGILITY.NS",
+    "name": "Sagility Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE0W2G01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SAILIFE",
+    "yahooSymbol": "SAILIFE.NS",
+    "name": "Sai Life Sciences Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE570L01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SAMMAANCAP",
+    "yahooSymbol": "SAMMAANCAP.NS",
+    "name": "Sammaan Capital Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE148I01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "MOTHERSON",
+    "yahooSymbol": "MOTHERSON.NS",
+    "name": "Samvardhana Motherson International Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE775A01035",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SAPPHIRE",
+    "yahooSymbol": "SAPPHIRE.NS",
+    "name": "Sapphire Foods India Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE806T01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SARDAEN",
+    "yahooSymbol": "SARDAEN.NS",
+    "name": "Sarda Energy and Minerals Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE385C01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SAREGAMA",
+    "yahooSymbol": "SAREGAMA.NS",
+    "name": "Saregama India Ltd",
+    "sector": "Media Entertainment & Publication",
+    "isin": "INE979A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SCHAEFFLER",
+    "yahooSymbol": "SCHAEFFLER.NS",
+    "name": "Schaeffler India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE513A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "yahooSymbol": "SCHNEIDER.NS",
+    "name": "Schneider Electric Infrastructure Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE839M01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SCI",
+    "yahooSymbol": "SCI.NS",
+    "name": "Shipping Corporation of India Ltd.",
+    "sector": "Services",
+    "isin": "INE109A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SHREECEM",
+    "yahooSymbol": "SHREECEM.NS",
+    "name": "Shree Cement Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE070A01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "yahooSymbol": "SHRIRAMFIN.NS",
+    "name": "Shriram Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE721A01047",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SHYAMMETL",
+    "yahooSymbol": "SHYAMMETL.NS",
+    "name": "Shyam Metalics and Energy Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE810G01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ENRIN",
+    "yahooSymbol": "ENRIN.NS",
+    "name": "Siemens Energy India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE1NPP01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SIEMENS",
+    "yahooSymbol": "SIEMENS.NS",
+    "name": "Siemens Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE003A01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SIGNATURE",
+    "yahooSymbol": "SIGNATURE.NS",
+    "name": "Signatureglobal (India) Ltd.",
+    "sector": "Realty",
+    "isin": "INE903U01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SOBHA",
+    "yahooSymbol": "SOBHA.NS",
+    "name": "Sobha Ltd.",
+    "sector": "Realty",
+    "isin": "INE671H01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SOLARINDS",
+    "yahooSymbol": "SOLARINDS.NS",
+    "name": "Solar Industries India Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE343H01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SONACOMS",
+    "yahooSymbol": "SONACOMS.NS",
+    "name": "Sona BLW Precision Forgings Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE073K01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SONATSOFTW",
+    "yahooSymbol": "SONATSOFTW.NS",
+    "name": "Sonata Software Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE269A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "STARHEALTH",
+    "yahooSymbol": "STARHEALTH.NS",
+    "name": "Star Health and Allied Insurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE575P01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SBIN",
+    "yahooSymbol": "SBIN.NS",
+    "name": "State Bank of India",
+    "sector": "Financial Services",
+    "isin": "INE062A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SAIL",
+    "yahooSymbol": "SAIL.NS",
+    "name": "Steel Authority of India Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE114A01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SUMICHEM",
+    "yahooSymbol": "SUMICHEM.NS",
+    "name": "Sumitomo Chemical India Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE258G01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "yahooSymbol": "SUNPHARMA.NS",
+    "name": "Sun Pharmaceutical Industries Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE044A01036",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SUNTV",
+    "yahooSymbol": "SUNTV.NS",
+    "name": "Sun TV Network Ltd.",
+    "sector": "Media Entertainment & Publication",
+    "isin": "INE424H01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SUNDARMFIN",
+    "yahooSymbol": "SUNDARMFIN.NS",
+    "name": "Sundaram Finance Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE660A01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SUPREMEIND",
+    "yahooSymbol": "SUPREMEIND.NS",
+    "name": "Supreme Industries Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE195A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SPLPETRO",
+    "yahooSymbol": "SPLPETRO.NS",
+    "name": "Supreme Petrochem Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE663A01033",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SUZLON",
+    "yahooSymbol": "SUZLON.NS",
+    "name": "Suzlon Energy Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE040H01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SWANCORP",
+    "yahooSymbol": "SWANCORP.NS",
+    "name": "Swan Corp Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE665A01038",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SWIGGY",
+    "yahooSymbol": "SWIGGY.NS",
+    "name": "Swiggy Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE00H001014",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SYNGENE",
+    "yahooSymbol": "SYNGENE.NS",
+    "name": "Syngene International Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE398R01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "SYRMA",
+    "yahooSymbol": "SYRMA.NS",
+    "name": "Syrma SGS Technology Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE0DYJ01015",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TBOTEK",
+    "yahooSymbol": "TBOTEK.NS",
+    "name": "TBO Tek Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE673O01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "yahooSymbol": "TVSMOTOR.NS",
+    "name": "TVS Motor Company Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE494B01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATACAP",
+    "yahooSymbol": "TATACAP.NS",
+    "name": "Tata Capital Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE976I01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATACHEM",
+    "yahooSymbol": "TATACHEM.NS",
+    "name": "Tata Chemicals Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE092A01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATACOMM",
+    "yahooSymbol": "TATACOMM.NS",
+    "name": "Tata Communications Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE151A01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TCS",
+    "yahooSymbol": "TCS.NS",
+    "name": "Tata Consultancy Services Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE467B01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATACONSUM",
+    "yahooSymbol": "TATACONSUM.NS",
+    "name": "Tata Consumer Products Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE192A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATAELXSI",
+    "yahooSymbol": "TATAELXSI.NS",
+    "name": "Tata Elxsi Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE670A01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATAINVEST",
+    "yahooSymbol": "TATAINVEST.NS",
+    "name": "Tata Investment Corporation Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE672A01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TMCV",
+    "yahooSymbol": "TMCV.NS",
+    "name": "Tata Motors Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE1TAE01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TMPV",
+    "yahooSymbol": "TMPV.NS",
+    "name": "Tata Motors Passenger Vehicles Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE155A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATAPOWER",
+    "yahooSymbol": "TATAPOWER.NS",
+    "name": "Tata Power Co. Ltd.",
+    "sector": "Power",
+    "isin": "INE245A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATASTEEL",
+    "yahooSymbol": "TATASTEEL.NS",
+    "name": "Tata Steel Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE081A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TATATECH",
+    "yahooSymbol": "TATATECH.NS",
+    "name": "Tata Technologies Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE142M01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TTML",
+    "yahooSymbol": "TTML.NS",
+    "name": "Tata Teleservices (Maharashtra) Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE517B01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TECHM",
+    "yahooSymbol": "TECHM.NS",
+    "name": "Tech Mahindra Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE669C01036",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TECHNOE",
+    "yahooSymbol": "TECHNOE.NS",
+    "name": "Techno Electric & Engineering Company Ltd.",
+    "sector": "Construction",
+    "isin": "INE285K01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TEGA",
+    "yahooSymbol": "TEGA.NS",
+    "name": "Tega Industries Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE011K01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TEJASNET",
+    "yahooSymbol": "TEJASNET.NS",
+    "name": "Tejas Networks Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE010J01012",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TENNIND",
+    "yahooSymbol": "TENNIND.NS",
+    "name": "Tenneco Clean Air India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE19RI01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "NIACL",
+    "yahooSymbol": "NIACL.NS",
+    "name": "The New India Assurance Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE470Y01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "RAMCOCEM",
+    "yahooSymbol": "RAMCOCEM.NS",
+    "name": "The Ramco Cements Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE331A01037",
+    "series": "EQ"
+  },
+  {
+    "symbol": "THERMAX",
+    "yahooSymbol": "THERMAX.NS",
+    "name": "Thermax Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE152A01029",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TIMKEN",
+    "yahooSymbol": "TIMKEN.NS",
+    "name": "Timken India Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE325A01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TITAGARH",
+    "yahooSymbol": "TITAGARH.NS",
+    "name": "Titagarh Rail Systems Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE615H01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TITAN",
+    "yahooSymbol": "TITAN.NS",
+    "name": "Titan Company Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE280A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "yahooSymbol": "TORNTPHARM.NS",
+    "name": "Torrent Pharmaceuticals Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE685A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TORNTPOWER",
+    "yahooSymbol": "TORNTPOWER.NS",
+    "name": "Torrent Power Ltd.",
+    "sector": "Power",
+    "isin": "INE813H01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TARIL",
+    "yahooSymbol": "TARIL.NS",
+    "name": "Transformers And Rectifiers (India) Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE763I01026",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TRAVELFOOD",
+    "yahooSymbol": "TRAVELFOOD.NS",
+    "name": "Travel Food Services Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE103V01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TRENT",
+    "yahooSymbol": "TRENT.NS",
+    "name": "Trent Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE849A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TRIDENT",
+    "yahooSymbol": "TRIDENT.NS",
+    "name": "Trident Ltd.",
+    "sector": "Textiles",
+    "isin": "INE064C01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TRITURBINE",
+    "yahooSymbol": "TRITURBINE.NS",
+    "name": "Triveni Turbine Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE152M01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "TIINDIA",
+    "yahooSymbol": "TIINDIA.NS",
+    "name": "Tube Investments of India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE974X01010",
+    "series": "EQ"
+  },
+  {
+    "symbol": "UCOBANK",
+    "yahooSymbol": "UCOBANK.NS",
+    "name": "UCO Bank",
+    "sector": "Financial Services",
+    "isin": "INE691A01018",
+    "series": "EQ"
+  },
+  {
+    "symbol": "UNOMINDA",
+    "yahooSymbol": "UNOMINDA.NS",
+    "name": "UNO Minda Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE405E01023",
+    "series": "EQ"
+  },
+  {
+    "symbol": "UPL",
+    "yahooSymbol": "UPL.NS",
+    "name": "UPL Ltd.",
+    "sector": "Chemicals",
+    "isin": "INE628A01036",
+    "series": "EQ"
+  },
+  {
+    "symbol": "UTIAMC",
+    "yahooSymbol": "UTIAMC.NS",
+    "name": "UTI Asset Management Company Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE094J01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "yahooSymbol": "ULTRACEMCO.NS",
+    "name": "UltraTech Cement Ltd.",
+    "sector": "Construction Materials",
+    "isin": "INE481G01011",
+    "series": "EQ"
+  },
+  {
+    "symbol": "UNIONBANK",
+    "yahooSymbol": "UNIONBANK.NS",
+    "name": "Union Bank of India",
+    "sector": "Financial Services",
+    "isin": "INE692A01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "UBL",
+    "yahooSymbol": "UBL.NS",
+    "name": "United Breweries Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE686F01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "UNITDSPR",
+    "yahooSymbol": "UNITDSPR.NS",
+    "name": "United Spirits Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE854D01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "URBANCO",
+    "yahooSymbol": "URBANCO.NS",
+    "name": "Urban Company Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE0CAZ01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "USHAMART",
+    "yahooSymbol": "USHAMART.NS",
+    "name": "Usha Martin Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE228A01035",
+    "series": "EQ"
+  },
+  {
+    "symbol": "VTL",
+    "yahooSymbol": "VTL.NS",
+    "name": "Vardhman Textiles Ltd.",
+    "sector": "Textiles",
+    "isin": "INE825A01020",
+    "series": "EQ"
+  },
+  {
+    "symbol": "VBL",
+    "yahooSymbol": "VBL.NS",
+    "name": "Varun Beverages Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE200M01039",
+    "series": "EQ"
+  },
+  {
+    "symbol": "VEDL",
+    "yahooSymbol": "VEDL.NS",
+    "name": "Vedanta Ltd.",
+    "sector": "Metals & Mining",
+    "isin": "INE205A01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "VIJAYA",
+    "yahooSymbol": "VIJAYA.NS",
+    "name": "Vijaya Diagnostic Centre Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE043W01024",
+    "series": "EQ"
+  },
+  {
+    "symbol": "VMM",
+    "yahooSymbol": "VMM.NS",
+    "name": "Vishal Mega Mart Ltd.",
+    "sector": "Consumer Services",
+    "isin": "INE01EA01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "IDEA",
+    "yahooSymbol": "IDEA.NS",
+    "name": "Vodafone Idea Ltd.",
+    "sector": "Telecommunication",
+    "isin": "INE669E01016",
+    "series": "EQ"
+  },
+  {
+    "symbol": "VOLTAS",
+    "yahooSymbol": "VOLTAS.NS",
+    "name": "Voltas Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE226A01021",
+    "series": "EQ"
+  },
+  {
+    "symbol": "WAAREEENER",
+    "yahooSymbol": "WAAREEENER.NS",
+    "name": "Waaree Energies Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE377N01017",
+    "series": "EQ"
+  },
+  {
+    "symbol": "WELCORP",
+    "yahooSymbol": "WELCORP.NS",
+    "name": "Welspun Corp Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE191B01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "WELSPUNLIV",
+    "yahooSymbol": "WELSPUNLIV.NS",
+    "name": "Welspun Living Ltd.",
+    "sector": "Textiles",
+    "isin": "INE192B01031",
+    "series": "EQ"
+  },
+  {
+    "symbol": "WHIRLPOOL",
+    "yahooSymbol": "WHIRLPOOL.NS",
+    "name": "Whirlpool of India Ltd.",
+    "sector": "Consumer Durables",
+    "isin": "INE716A01013",
+    "series": "EQ"
+  },
+  {
+    "symbol": "WIPRO",
+    "yahooSymbol": "WIPRO.NS",
+    "name": "Wipro Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE075A01022",
+    "series": "EQ"
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "yahooSymbol": "WOCKPHARMA.NS",
+    "name": "Wockhardt Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE049B01025",
+    "series": "EQ"
+  },
+  {
+    "symbol": "YESBANK",
+    "yahooSymbol": "YESBANK.NS",
+    "name": "Yes Bank Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE528G01035",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ZFCVINDIA",
+    "yahooSymbol": "ZFCVINDIA.NS",
+    "name": "ZF Commercial Vehicle Control Systems India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE342J01019",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ZEEL",
+    "yahooSymbol": "ZEEL.NS",
+    "name": "Zee Entertainment Enterprises Ltd.",
+    "sector": "Media Entertainment & Publication",
+    "isin": "INE256A01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ZENTEC",
+    "yahooSymbol": "ZENTEC.NS",
+    "name": "Zen Technologies Ltd.",
+    "sector": "Capital Goods",
+    "isin": "INE251B01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ZENSARTECH",
+    "yahooSymbol": "ZENSARTECH.NS",
+    "name": "Zensar Technolgies Ltd.",
+    "sector": "Information Technology",
+    "isin": "INE520A01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "yahooSymbol": "ZYDUSLIFE.NS",
+    "name": "Zydus Lifesciences Ltd.",
+    "sector": "Healthcare",
+    "isin": "INE010B01027",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ZYDUSWELL",
+    "yahooSymbol": "ZYDUSWELL.NS",
+    "name": "Zydus Wellness Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "isin": "INE768C01028",
+    "series": "EQ"
+  },
+  {
+    "symbol": "ECLERX",
+    "yahooSymbol": "ECLERX.NS",
+    "name": "eClerx Services Ltd.",
+    "sector": "Services",
+    "isin": "INE738I01010",
+    "series": "EQ"
+  }
+]
