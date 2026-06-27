@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #141414;
+  --bg-card: #1C1C1C;
+  --bg-hover: #242424;
+  --accent: #00D4AA;
+  --accent-dim: #00A884;
+  --text-primary: #F0F0F0;
+  --text-secondary: #888888;
+  --text-muted: #555555;
+  --green: #00C853;
+  --red: #FF3D3D;
+  --border: #2A2A2A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono, code, .price {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-hover) 50%, var(--bg-card) 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Price flash animations */
+@keyframes flash-green {
+  0% { background-color: rgba(0, 200, 83, 0); }
+  30% { background-color: rgba(0, 200, 83, 0.2); }
+  100% { background-color: rgba(0, 200, 83, 0); }
+}
+@keyframes flash-red {
+  0% { background-color: rgba(255, 61, 61, 0); }
+  30% { background-color: rgba(255, 61, 61, 0.2); }
+  100% { background-color: rgba(255, 61, 61, 0); }
+}
+
+.flash-green {
+  animation: flash-green 0.6s ease-out;
+}
+.flash-red {
+  animation: flash-red 0.6s ease-out;
+}
+
+/* Row tint for gainers/losers */
+.row-green {
+  background-color: rgba(0, 200, 83, 0.03);
+}
+.row-red {
+  background-color: rgba(255, 61, 61, 0.03);
+}
+
+/* Smooth table transitions */
+tr {
+  transition: background-color 0.15s ease;
+}

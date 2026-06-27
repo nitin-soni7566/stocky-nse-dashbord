@@ -1,0 +1,30 @@
+{
+  "name": "stock-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch-symbols": "node scripts/fetchSymbols.js",
+    "dev": "concurrently \"node --max-http-header-size=65536 server/index.js\" \"vite\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "axios": "^1.6",
+    "express": "^4.18",
+    "cors": "^2.8",
+    "csv-parse": "^5.5",
+    "concurrently": "^8",
+    "react-window": "^1.8",
+    "date-fns": "^2.30",
+    "date-fns-tz": "^2.0"
+  },
+  "devDependencies": {
+    "vite": "^5",
+    "@vitejs/plugin-react": "^4",
+    "tailwindcss": "^3",
+    "autoprefixer": "^10",
+    "postcss": "^8"
+  }
+}
