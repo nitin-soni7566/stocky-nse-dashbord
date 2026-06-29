@@ -1,41 +1,54 @@
 import { useState, useMemo } from 'react'
 import { StockFilters } from './StockFilters.jsx'
 import { StockTable } from './StockTable.jsx'
+import { IndexTicker } from './IndexTicker.jsx'
 import { useStockData } from '../../hooks/useStockData.js'
 import { ErrorBoundary } from '../UI/ErrorBoundary.jsx'
 import { formatINR, formatChange } from '../../utils/formatters.js'
 import nifty200 from '../../data/nifty200.json'
 import nifty500 from '../../data/nifty500.json'
+import niftyFO from '../../data/niftyFO.json'
 
 const INDICES = { 'Nifty 200': nifty200, 'Nifty 500': nifty500 }
+if (niftyFO.length > 0) INDICES['F&O'] = niftyFO
 
 export function StockList() {
   const [activeIndex, setActiveIndex] = useState('Nifty 200')
-  const [filters, setFilters] = useState({ search: '', sort: 'change-desc', tab: 'All' })
+  const [filters, setFilters] = useState({ search: '', sort: 'change-desc', tab: 'All' }) // change-desc = Gainers First
   const [selectedStock, setSelectedStock] = useState(null)
 
   const symbols = INDICES[activeIndex]
-  const { quotes, loading, lastUpdated, refresh, prevQuotes } = useStockData(symbols)
+  const { quotes, loading, lastUpdated, refresh, prevQuotes, dataSource } = useStockData(symbols)
 
   const filteredStocks = useMemo(() => {
     let list = [...symbols]
+
+    // Search filter
     const q = filters.search.toLowerCase()
     if (q) list = list.filter(s => s.symbol.toLowerCase().includes(q) || s.name.toLowerCase().includes(q))
 
-    list = list.filter(s => {
-      const change = quotes[s.yahooSymbol]?.changePct
-      if (filters.tab === 'Gainers') return change > 0
-      if (filters.tab === 'Losers') return change < 0
-      if (filters.tab === 'Unchanged') return change === 0
-      return true
-    })
+    // Tab filter — only exclude stocks we have data for; stocks with no data pass through
+    if (filters.tab !== 'All') {
+      list = list.filter(s => {
+        const change = quotes[s.yahooSymbol]?.changePct
+        if (change == null) return false   // hide no-data stocks in filtered tabs
+        if (filters.tab === 'Gainers')   return change > 0
+        if (filters.tab === 'Losers')    return change < 0
+        if (filters.tab === 'Unchanged') return Math.abs(change) < 0.05
+        return true
+      })
+    }
 
+    // Sort — push stocks with no data to bottom regardless of direction
     const [field, dir] = filters.sort.split('-')
     list.sort((a, b) => {
       const qa = quotes[a.yahooSymbol]
       const qb = quotes[b.yahooSymbol]
-      const va = field === 'price' ? (qa?.price ?? 0) : field === 'change' ? (qa?.changePct ?? 0) : (qa?.volume ?? 0)
-      const vb = field === 'price' ? (qb?.price ?? 0) : field === 'change' ? (qb?.changePct ?? 0) : (qb?.volume ?? 0)
+      const va = field === 'price' ? qa?.price : field === 'change' ? qa?.changePct : qa?.volume
+      const vb = field === 'price' ? qb?.price : field === 'change' ? qb?.changePct : qb?.volume
+      if (va == null && vb == null) return 0
+      if (va == null) return 1
+      if (vb == null) return -1
       return dir === 'asc' ? va - vb : vb - va
     })
 
@@ -45,7 +58,8 @@ export function StockList() {
   return (
     <ErrorBoundary>
       <div className="flex flex-col h-full">
-        <div className="flex items-center gap-2 px-4 pt-4 pb-0">
+        <IndexTicker />
+        <div className="flex items-center gap-2 px-4 pt-3 pb-0">
           {Object.keys(INDICES).map(idx => (
             <button
               key={idx}
@@ -61,7 +75,7 @@ export function StockList() {
           ))}
         </div>
 
-        <StockFilters filters={filters} onChange={setFilters} onRefresh={refresh} lastUpdated={lastUpdated} />
+        <StockFilters filters={filters} onChange={setFilters} onRefresh={refresh} lastUpdated={lastUpdated} dataSource={dataSource} />
 
         <div className="flex flex-1 overflow-hidden relative">
           <StockTable

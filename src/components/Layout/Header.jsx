@@ -3,7 +3,7 @@ import { MarketStatus } from './MarketStatus.jsx'
 import { formatTime } from '../../utils/formatters.js'
 import { useApp } from '../../context/AppContext.jsx'
 
-export function Header() {
+export function Header({ onSettingsOpen }) {
   const [time, setTime] = useState(formatTime(new Date()))
   const { addToast } = useApp()
 
@@ -49,6 +49,14 @@ export function Header() {
           ↻ Refresh Symbols
         </button>
       )}
+
+      <button
+        onClick={onSettingsOpen}
+        title="Settings"
+        className="p-1.5 rounded text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors text-base"
+      >
+        ⚙️
+      </button>
     </header>
   )
 }

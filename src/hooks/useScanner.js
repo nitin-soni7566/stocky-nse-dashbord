@@ -13,7 +13,7 @@ export function useScanner() {
   const [timeRemaining, setTimeRemaining] = useState(null)
   const cancelRef = useRef(false)
 
-  const runScan = useCallback(async (symbols, options = { doji: true, breakout: true }) => {
+  const runScan = useCallback(async (symbols, options = { doji: true, breakout: true, breakoutTime: '09:15' }) => {
     cancelRef.current = false
     setScanning(true)
     setResults([])
@@ -45,7 +45,7 @@ export function useScanner() {
             ])
 
             const yesterdayCandle = history && history.length >= 2 ? history[history.length - 2] : null
-            const nifteenCandle = intraday ? get915Candle(intraday) : null
+            const nifteenCandle = intraday ? get915Candle(intraday, options.breakoutTime ?? '09:15') : null
             const todayClose = history?.[history.length - 1]?.close ?? null
             const currentPrice = todayClose
 
@@ -63,13 +63,20 @@ export function useScanner() {
             if (dojiResult && breakoutResult) signal = 'STRONG'
             else if (breakoutResult && !dojiResult) signal = 'BREAKOUT ONLY'
 
+            const prevClose = yesterdayCandle?.close ?? null
+            const changePct = currentPrice != null && prevClose != null
+              ? ((currentPrice - prevClose) / prevClose) * 100
+              : null
+
             scanResults.push({
               symbol: stock.symbol,
               name: stock.name,
+              sector: stock.sector ?? null,
               dojiBodyPct: yesterdayCandle ? getDojiStrength(yesterdayCandle) : null,
               prevDayRange: yesterdayCandle ? (yesterdayCandle.high - yesterdayCandle.low).toFixed(2) : null,
               nifteenHigh: nifteenCandle?.high ?? null,
               currentPrice,
+              changePct,
               breakoutPct: nifteenCandle && currentPrice != null ? getBreakoutPct(currentPrice, nifteenCandle) : null,
               signal,
               isDoji: dojiResult,

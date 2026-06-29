@@ -16,8 +16,15 @@ export function useHeatmap(symbols, quotes) {
         const avgChange = stocksWithData.length
           ? stocksWithData.reduce((sum, s) => sum + s.quote.changePct, 0) / stocksWithData.length
           : null
-        return { sector, stocks, avgChange, count: stocks.length }
+        // Sort stocks within sector: gainers first, losers last, no-data at bottom
+        const sortedStocks = [...stocks].sort((a, b) => {
+          const ca = a.quote?.changePct ?? -9999
+          const cb = b.quote?.changePct ?? -9999
+          return cb - ca
+        })
+        return { sector, stocks: sortedStocks, avgChange, count: stocks.length }
       })
-      .sort((a, b) => b.count - a.count)
+      // Sort sectors: best avg change first, sectors with no data at bottom
+      .sort((a, b) => (b.avgChange ?? -9999) - (a.avgChange ?? -9999))
   }, [symbols, quotes])
 }
