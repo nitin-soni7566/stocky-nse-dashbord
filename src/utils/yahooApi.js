@@ -21,7 +21,7 @@ export async function fetchBulkQuotes(symbolsArray) {
 
   for (let i = 0; i < symbolsArray.length; i += BATCH_SIZE) {
     const batch = symbolsArray.slice(i, i + BATCH_SIZE)
-    const symbols = batch.map(s => (s.endsWith('.NS') ? s : `${s}.NS`)).join(',')
+    const symbols = batch.map(s => (s.endsWith('.NS') || s.startsWith('^') ? s : `${s}.NS`)).join(',')
     const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols}&fields=${FIELDS}`
     const data = await proxyFetch(url)
 
@@ -96,7 +96,7 @@ export async function fetchIntradayCandles(symbol) {
   return candles
 }
 
-export function get915Candle(candles) {
+export function get915Candle(candles, istTime = '09:15') {
   if (!candles?.length) return null
-  return candles.find(c => c.istTime === '09:15') ?? candles[0] ?? null
+  return candles.find(c => c.istTime === istTime) ?? candles[0] ?? null
 }

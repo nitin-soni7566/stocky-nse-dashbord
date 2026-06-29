@@ -2,15 +2,19 @@ import { useState } from 'react'
 import { useScanner } from '../../hooks/useScanner.js'
 import { ScanProgress } from './ScanProgress.jsx'
 import { ScannerResults } from './ScannerResults.jsx'
+import { ScanHeatmap } from './ScanHeatmap.jsx'
+import { VolumeShocker } from './VolumeShocker.jsx'
 import { ErrorBoundary } from '../UI/ErrorBoundary.jsx'
 import nifty200 from '../../data/nifty200.json'
 import nifty500 from '../../data/nifty500.json'
+import niftyFO from '../../data/niftyFO.json'
 
 const INDICES = { 'Nifty 200': nifty200, 'Nifty 500': nifty500 }
+if (niftyFO.length > 0) INDICES['F&O'] = niftyFO
 
 export function Scanner() {
   const [selectedIndex, setSelectedIndex] = useState('Nifty 200')
-  const [options, setOptions] = useState({ doji: true, breakout: true })
+  const [options, setOptions] = useState({ doji: true, breakout: true, breakoutTime: '09:15' })
   const [infoOpen, setInfoOpen] = useState(false)
   const { results, scanning, progress, timeRemaining, runScan, cancel } = useScanner()
 
@@ -20,6 +24,12 @@ export function Scanner() {
   }
 
   const toggleOption = key => setOptions(o => ({ ...o, [key]: !o[key] }))
+
+  const handleTimeChange = e => {
+    const val = e.target.value
+    if (/^\d{2}:\d{2}$/.test(val)) setOptions(o => ({ ...o, breakoutTime: val }))
+    else setOptions(o => ({ ...o, breakoutTime: val }))
+  }
 
   return (
     <ErrorBoundary>
@@ -71,7 +81,7 @@ export function Scanner() {
               <div className="flex gap-4">
                 {[
                   { key: 'doji', label: 'Previous Day Doji' },
-                  { key: 'breakout', label: '9:15 AM High Breakout' }
+                  { key: 'breakout', label: 'High Breakout' }
                 ].map(({ key, label }) => (
                   <label key={key} className="flex items-center gap-2 cursor-pointer">
                     <input
@@ -85,6 +95,33 @@ export function Scanner() {
                 ))}
               </div>
             </div>
+
+            {options.breakout && (
+              <div>
+                <label className="block text-xs text-[var(--text-muted)] mb-2 uppercase tracking-wider">Breakout Time (IST)</label>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="time"
+                    value={options.breakoutTime}
+                    onChange={handleTimeChange}
+                    min="09:15"
+                    max="15:25"
+                    step="60"
+                    className="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-3 py-1.5 text-sm font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] w-32"
+                  />
+                  <button
+                    onClick={() => setOptions(o => ({ ...o, breakoutTime: '09:15' }))}
+                    className="text-xs text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+                    title="Reset to 9:15 AM"
+                  >
+                    Reset
+                  </button>
+                  {options.breakoutTime !== '09:15' && (
+                    <span className="text-xs text-yellow-400">Custom time active</span>
+                  )}
+                </div>
+              </div>
+            )}
 
             <button
               onClick={handleRun}
@@ -101,8 +138,9 @@ export function Scanner() {
         )}
 
         {!scanning && results.length > 0 && (
-          <div className="flex-1 bg-[var(--bg-card)] rounded-xl border border-[var(--border)] p-4 overflow-hidden flex flex-col">
+          <div className="bg-[var(--bg-card)] rounded-xl border border-[var(--border)] p-4 flex flex-col">
             <ScannerResults results={results} />
+            <ScanHeatmap scannedStocks={results} />
           </div>
         )}
 
@@ -112,6 +150,8 @@ export function Scanner() {
             <p>Scan complete. No stocks matched the selected criteria.</p>
           </div>
         )}
+
+        <VolumeShocker />
       </div>
     </ErrorBoundary>
   )

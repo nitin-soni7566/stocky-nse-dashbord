@@ -94,3 +94,34 @@ html, body, #root {
 tr {
   transition: background-color 0.15s ease;
 }
+
+/* Index ticker auto-scroll */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  animation: ticker-scroll 60s linear infinite;
+  width: max-content;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Drawer slide-in */
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.drawer-enter {
+  animation: slide-in-right 0.25s ease-out forwards;
+}
+
+/* Settings drawer slide */
+@keyframes slide-in-right-settings {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.settings-enter {
+  animation: slide-in-right-settings 0.2s ease-out forwards;
+}

@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react'
 
 const SORT_OPTIONS = [
-  { value: 'price-asc', label: 'Price ↑' },
-  { value: 'price-desc', label: 'Price ↓' },
-  { value: 'change-asc', label: 'Chg% ↑' },
-  { value: 'change-desc', label: 'Chg% ↓' },
-  { value: 'volume-asc', label: 'Vol ↑' },
-  { value: 'volume-desc', label: 'Vol ↓' }
+  { value: 'change-desc', label: 'Gainers First' },
+  { value: 'change-asc',  label: 'Losers First' },
+  { value: 'price-desc',  label: 'Price: High→Low' },
+  { value: 'price-asc',   label: 'Price: Low→High' },
+  { value: 'volume-desc', label: 'Volume: High→Low' },
+  { value: 'volume-asc',  label: 'Volume: Low→High' },
 ]
 
 const FILTER_TABS = ['All', 'Gainers', 'Losers', 'Unchanged']
 
-export function StockFilters({ filters, onChange, onRefresh, lastUpdated }) {
+export function StockFilters({ filters, onChange, onRefresh, lastUpdated, dataSource }) {
   const [searchInput, setSearchInput] = useState(filters.search)
 
   useEffect(() => {
@@ -68,9 +68,22 @@ export function StockFilters({ filters, onChange, onRefresh, lastUpdated }) {
             {tab}
           </button>
         ))}
-        {lastUpdatedText && (
-          <span className="text-xs text-[var(--text-muted)] ml-auto">{lastUpdatedText}</span>
-        )}
+        <span className="ml-auto flex items-center gap-2">
+          {dataSource === 'dhan' ? (
+            <span className="flex items-center gap-1 text-xs font-medium text-green-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
+              LIVE
+            </span>
+          ) : (
+            <span className="flex items-center gap-1 text-xs text-yellow-500">
+              <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 inline-block" />
+              ~15min delay
+            </span>
+          )}
+          {lastUpdatedText && (
+            <span className="text-xs text-[var(--text-muted)]">{lastUpdatedText}</span>
+          )}
+        </span>
       </div>
     </div>
   )
