@@ -23,7 +23,10 @@ export const INDEX_KEY_MAP = {
   '^NIFTY_FIN_SERVICE': 'NSE_INDEX|Nifty Fin Service',
   '^CNXFIN':            'NSE_INDEX|Nifty FinSrv25 50',
   '^CNX100':            'NSE_INDEX|Nifty 100',
-  '^CNX500':            'NSE_INDEX|Nifty 500'
+  '^CNX500':            'NSE_INDEX|Nifty 500',
+  '^INDIAVIX':          'NSE_INDEX|India VIX',
+  '^BSESN':             'BSE_INDEX|SENSEX',
+  '^CNXNXT50':          'NSE_INDEX|Nifty Next 50'
 }
 
 // Build the equity maps once from the union of all symbol lists (deduped by yahooSymbol).

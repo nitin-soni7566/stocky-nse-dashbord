@@ -7,6 +7,7 @@ import { writeFileSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { mountUpstox } from './upstox.js'
+import { mountSentiment, runHealthCheck } from './sentiment.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const app = express()
@@ -15,6 +16,9 @@ app.use(express.json())
 
 // ─── Upstox (REST proxy + WebSocket relay + SSE) ────────────────────────────────
 mountUpstox(app)
+
+// ─── Market Sentiment (Page 4) endpoints ────────────────────────────────────────
+mountSentiment(app)
 
 // ─── Market status ────────────────────────────────────────────────────────────
 const NSE_HOLIDAYS_2025_2026 = [
@@ -129,6 +133,7 @@ app.listen(3001, () => {
   console.log('Server running on http://localhost:3001')
   if (process.env.UPSTOX_ACCESS_TOKEN) {
     console.log('Upstox: configured — real-time WebSocket feed available')
+    runHealthCheck().catch(err => console.error('Health check error:', err.message))
   } else {
     console.log('Upstox: not configured — add UPSTOX_ACCESS_TOKEN to .env')
   }

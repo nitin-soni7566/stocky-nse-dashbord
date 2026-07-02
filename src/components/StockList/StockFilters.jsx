@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { isMarketOpen } from '../../utils/marketHours.js'
 
 const SORT_OPTIONS = [
   { value: 'change-desc', label: 'Gainers First' },
@@ -69,7 +70,12 @@ export function StockFilters({ filters, onChange, onRefresh, lastUpdated, dataSo
           </button>
         ))}
         <span className="ml-auto flex items-center gap-2">
-          {dataSource === 'upstox-live' ? (
+          {!isMarketOpen() ? (
+            <span className="flex items-center gap-1 text-xs font-medium text-[var(--text-muted)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--text-muted)] inline-block" />
+              Market closed · last price
+            </span>
+          ) : dataSource === 'upstox-live' ? (
             <span className="flex items-center gap-1 text-xs font-medium text-green-400">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
               LIVE · Upstox

@@ -1,3 +1,8 @@
+// Generic shimmer block. Reuses the `.skeleton` class + `shimmer` keyframe in index.css.
+export function Skeleton({ width = '100%', height = '16px', borderRadius = '4px', className = '', style = {} }) {
+  return <div className={`skeleton ${className}`} style={{ width, height, borderRadius, ...style }} />
+}
+
 export function SkeletonRow({ cols = 10 }) {
   return (
     <tr className="border-b border-[var(--border)]">
