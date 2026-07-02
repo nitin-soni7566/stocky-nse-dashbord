@@ -9,7 +9,20 @@ import nifty200 from '../../data/nifty200.json'
 import nifty500 from '../../data/nifty500.json'
 import niftyFO from '../../data/niftyFO.json'
 
-const INDICES = { 'Nifty 200': nifty200, 'Nifty 500': nifty500 }
+// Nifty Total = deduped union of every list we have (the widest universe).
+function dedupeBySymbol(...lists) {
+  const seen = new Set()
+  const out = []
+  for (const list of lists) {
+    for (const s of list) {
+      if (!seen.has(s.symbol)) { seen.add(s.symbol); out.push(s) }
+    }
+  }
+  return out
+}
+
+const niftyTotal = dedupeBySymbol(nifty500, niftyFO, nifty200)
+const INDICES = { 'Nifty Total': niftyTotal, 'Nifty 500': nifty500, 'Nifty 200': nifty200 }
 if (niftyFO.length > 0) INDICES['F&O'] = niftyFO
 
 export function StockList() {
@@ -70,7 +83,7 @@ export function StockList() {
                   : 'border-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                 }`}
             >
-              {idx} <span className="text-xs opacity-60">({symbols.length})</span>
+              {idx} <span className="text-xs opacity-60">({INDICES[idx].length})</span>
             </button>
           ))}
         </div>

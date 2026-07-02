@@ -21,7 +21,16 @@ export function useStockData(symbols) {
   const applyQuotes = useCallback(next => {
     setQuotes(prev => {
       prevQuotes.current = prev
-      return { ...prev, ...next }
+      const merged = { ...prev }
+      for (const [sym, q] of Object.entries(next)) {
+        const old = merged[sym]
+        // Never overwrite an existing real value with null/undefined (e.g. an
+        // ltpc-only tick) — keeps the last price/OHLC visible when the market is closed.
+        merged[sym] = old
+          ? { ...old, ...Object.fromEntries(Object.entries(q).filter(([, v]) => v != null)) }
+          : q
+      }
+      return merged
     })
     setLastUpdated(new Date())
     setLoading(false)

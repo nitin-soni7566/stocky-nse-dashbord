@@ -28,6 +28,14 @@ export function formatChangePct(value) {
   return { text: '— 0.00%', color: '#888888' }
 }
 
+export function formatCrore(value) {
+  if (value == null || isNaN(value)) return '—'
+  const a = Math.abs(value)
+  if (a >= 10000) return (value / 10000).toFixed(2) + 'Cr'
+  if (a >= 100) return (value / 100).toFixed(2) + 'L'
+  return value.toFixed(2) + 'Cr'
+}
+
 export function formatTime(date) {
   return new Intl.DateTimeFormat('en-IN', {
     timeZone: 'Asia/Kolkata',

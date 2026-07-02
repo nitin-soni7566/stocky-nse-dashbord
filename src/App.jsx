@@ -6,6 +6,7 @@ import { MarketBanner } from './components/Layout/MarketBanner.jsx'
 import { StockList } from './components/StockList/StockList.jsx'
 import { Scanner } from './components/Scanner/Scanner.jsx'
 import { Heatmap } from './components/Heatmap/Heatmap.jsx'
+import { SentimentPage } from './components/Page4_Sentiment/SentimentPage.jsx'
 import { OnboardingWizard } from './components/Onboarding/OnboardingWizard.jsx'
 import { SettingsPanel, loadSettings } from './components/Settings/SettingsPanel.jsx'
 
@@ -45,6 +46,7 @@ export default function App() {
       case '1': dispatch({ type: 'SET_VIEW', payload: 'stocklist' }); break
       case '2': dispatch({ type: 'SET_VIEW', payload: 'scanner' }); break
       case '3': dispatch({ type: 'SET_VIEW', payload: 'heatmap' }); break
+      case '4': dispatch({ type: 'SET_VIEW', payload: 'sentiment' }); break
       case 'r': case 'R': dispatch({ type: 'REFRESH_CURRENT' }); break
       case 's': case 'S':
         if (state.activeView === 'stocklist') {
@@ -65,7 +67,8 @@ export default function App() {
   const views = {
     stocklist: <StockList />,
     scanner: <Scanner />,
-    heatmap: <Heatmap />
+    heatmap: <Heatmap />,
+    sentiment: <SentimentPage />
   }
 
   return (
