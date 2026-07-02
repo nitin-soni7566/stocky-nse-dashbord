@@ -1,62 +1,63 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { fetchBulkQuotes } from '../utils/yahooApi.js'
-import { fetchDhanQuotes, getDhanStatus } from '../utils/dhanApi.js'
+import { fetchBulkQuotes, getUpstoxStatus, subscribeQuotes } from '../utils/upstoxApi.js'
 import { isMarketOpen } from '../utils/marketHours.js'
 
 export function useStockData(symbols) {
   const [quotes, setQuotes] = useState({})
   const [loading, setLoading] = useState(true)
   const [lastUpdated, setLastUpdated] = useState(null)
-  const [dataSource, setDataSource] = useState('yahoo')  // 'dhan' | 'yahoo'
-  const [useDhan, setUseDhan] = useState(false)
+  const [dataSource, setDataSource] = useState('upstox-poll')  // 'upstox-live' | 'upstox-poll'
+  const [streaming, setStreaming] = useState(null)             // null = unknown yet
   const prevQuotes = useRef({})
 
-  // Check Dhan availability once on mount
+  // Detect streaming capability once (WS relay available in dev, not on Netlify).
   useEffect(() => {
-    getDhanStatus().then(s => setUseDhan(s.configured))
+    getUpstoxStatus().then(s => setStreaming(!!s.streaming))
+  }, [])
+
+  const yahooSymbols = symbols?.map(s => s.yahooSymbol) ?? []
+  const symbolsKey = yahooSymbols.join(',')
+
+  const applyQuotes = useCallback(next => {
+    setQuotes(prev => {
+      prevQuotes.current = prev
+      return { ...prev, ...next }
+    })
+    setLastUpdated(new Date())
+    setLoading(false)
   }, [])
 
   const refresh = useCallback(async () => {
-    if (!symbols?.length) return
-    const yahooSymbols = symbols.map(s => s.yahooSymbol)
+    if (!yahooSymbols.length) return
+    const data = await fetchBulkQuotes(yahooSymbols)
+    if (Object.keys(data).length) applyQuotes(data)
+    else setLoading(false)
+  }, [symbolsKey, applyQuotes])
 
-    let data = {}
-    let source = 'yahoo'
-
-    if (useDhan) {
-      data = await fetchDhanQuotes(yahooSymbols)
-      if (Object.keys(data).length > 0) source = 'dhan'
-    }
-
-    // Yahoo Finance for index symbols (^NSEI etc) and as fallback for any missing
-    const missing = yahooSymbols.filter(s => !data[s])
-    if (missing.length) {
-      const yData = await fetchBulkQuotes(missing)
-      data = { ...data, ...yData }
-    }
-
-    prevQuotes.current = quotes
-    setQuotes(data)
-    setDataSource(source)
-    setLastUpdated(new Date())
-    setLoading(false)
-  }, [symbols, useDhan])
-
+  // Reset when the symbol set changes.
   useEffect(() => {
     setLoading(true)
     setQuotes({})
-  }, [symbols])
+    prevQuotes.current = {}
+  }, [symbolsKey])
 
+  // Live stream (dev) or polling (prod), decided by `streaming`.
   useEffect(() => {
-    refresh()
-  }, [refresh])
+    if (streaming === null || !yahooSymbols.length) return
 
-  useEffect(() => {
+    refresh()   // initial snapshot regardless of mode
+
+    if (streaming) {
+      setDataSource('upstox-live')
+      const unsubscribe = subscribeQuotes(yahooSymbols, applyQuotes)
+      return unsubscribe
+    }
+
+    setDataSource('upstox-poll')
     if (!isMarketOpen()) return
-    // Dhan: poll every 5 seconds. Yahoo Finance: every 60 seconds.
-    const interval = setInterval(refresh, useDhan ? 5000 : 60000)
+    const interval = setInterval(refresh, 2000)
     return () => clearInterval(interval)
-  }, [refresh, useDhan])
+  }, [streaming, symbolsKey, refresh, applyQuotes])
 
   return { quotes, loading, lastUpdated, refresh, prevQuotes: prevQuotes.current, dataSource }
 }

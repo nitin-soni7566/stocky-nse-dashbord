@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react'
-import { fetchOHLCHistory } from '../utils/yahooApi.js'
+import { fetchOHLCHistory } from '../utils/upstoxApi.js'
 
 function delay(ms) {
   return new Promise(r => setTimeout(r, ms))

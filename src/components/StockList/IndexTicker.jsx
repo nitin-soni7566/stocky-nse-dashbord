@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { fetchBulkQuotes } from '../../utils/yahooApi.js'
+import { fetchBulkQuotes } from '../../utils/upstoxApi.js'
 import { formatINR, formatChangePct } from '../../utils/formatters.js'
 import { useApp } from '../../context/AppContext.jsx'
 
