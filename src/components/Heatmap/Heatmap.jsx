@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { fetchBulkQuotes } from '../../utils/yahooApi.js'
+import { fetchBulkQuotes } from '../../utils/upstoxApi.js'
 import { IndexCard } from './IndexCard.jsx'
 import { IndexDrawer } from './IndexDrawer.jsx'
 import { SectorBlock } from './SectorBlock.jsx'

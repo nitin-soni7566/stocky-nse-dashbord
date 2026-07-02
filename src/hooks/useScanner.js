@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react'
-import { fetchOHLCHistory, fetchIntradayCandles, get915Candle } from '../utils/yahooApi.js'
+import { fetchOHLCHistory, fetchIntradayCandles, get915Candle } from '../utils/upstoxApi.js'
 import { isDoji, getDojiStrength, isBreakout, getBreakoutPct } from '../utils/dojiLogic.js'
 
 function delay(ms) {

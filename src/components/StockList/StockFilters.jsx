@@ -69,15 +69,15 @@ export function StockFilters({ filters, onChange, onRefresh, lastUpdated, dataSo
           </button>
         ))}
         <span className="ml-auto flex items-center gap-2">
-          {dataSource === 'dhan' ? (
+          {dataSource === 'upstox-live' ? (
             <span className="flex items-center gap-1 text-xs font-medium text-green-400">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
-              LIVE
+              LIVE · Upstox
             </span>
           ) : (
-            <span className="flex items-center gap-1 text-xs text-yellow-500">
-              <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 inline-block" />
-              ~15min delay
+            <span className="flex items-center gap-1 text-xs font-medium text-[var(--accent)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] inline-block" />
+              Upstox · polling
             </span>
           )}
           {lastUpdatedText && (

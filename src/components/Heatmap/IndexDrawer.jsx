@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { fetchBulkQuotes } from '../../utils/yahooApi.js'
+import { fetchBulkQuotes } from '../../utils/upstoxApi.js'
 import { formatINR, formatVolume, formatChangePct } from '../../utils/formatters.js'
 import { ChangePill, ChangeText } from '../UI/ChangePill.jsx'
 import nifty500 from '../../data/nifty500.json'

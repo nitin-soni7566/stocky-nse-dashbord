@@ -4,8 +4,8 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/api/proxy"
-  to = "/.netlify/functions/proxy"
+  from = "/api/upstox/*"
+  to = "/.netlify/functions/upstox/:splat"
   status = 200
 
 [[redirects]]

@@ -1539,15 +1539,6 @@
     "lotSize": 4700
   },
   {
-    "symbol": "SAMMAANCAP",
-    "yahooSymbol": "SAMMAANCAP.NS",
-    "name": "Sammaan Capital Ltd.",
-    "sector": "Financial Services",
-    "isin": "INE148I01020",
-    "series": "EQ",
-    "lotSize": 4300
-  },
-  {
     "symbol": "SBICARD",
     "yahooSymbol": "SBICARD.NS",
     "name": "SBI Cards and Payment Services Ltd.",
