@@ -43,10 +43,10 @@ export default function App() {
   const handleKey = useCallback(e => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.metaKey || e.ctrlKey) return
     switch (e.key) {
-      case '1': dispatch({ type: 'SET_VIEW', payload: 'stocklist' }); break
-      case '2': dispatch({ type: 'SET_VIEW', payload: 'scanner' }); break
-      case '3': dispatch({ type: 'SET_VIEW', payload: 'heatmap' }); break
-      case '4': dispatch({ type: 'SET_VIEW', payload: 'sentiment' }); break
+      case '1': dispatch({ type: 'SET_VIEW', payload: 'sentiment' }); break
+      case '2': dispatch({ type: 'SET_VIEW', payload: 'stocklist' }); break
+      case '3': dispatch({ type: 'SET_VIEW', payload: 'scanner' }); break
+      case '4': dispatch({ type: 'SET_VIEW', payload: 'heatmap' }); break
       case 'r': case 'R': dispatch({ type: 'REFRESH_CURRENT' }); break
       case 's': case 'S':
         if (state.activeView === 'stocklist') {

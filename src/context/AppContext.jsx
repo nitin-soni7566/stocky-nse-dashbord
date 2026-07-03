@@ -3,7 +3,7 @@ import { createContext, useContext, useReducer } from 'react'
 const AppContext = createContext(null)
 
 const initialState = {
-  activeView: 'stocklist',
+  activeView: 'sentiment',
   toasts: [],
   marketStatus: { isOpen: false, session: 'closed' }
 }

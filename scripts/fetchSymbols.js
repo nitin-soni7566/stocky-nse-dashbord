@@ -100,6 +100,12 @@ async function main() {
     resolve(__dirname, '../src/data/nifty500.json')
   )
 
+  await fetchAndSaveIndex(
+    'Nifty Total Market (750)',
+    'https://archives.nseindia.com/content/indices/ind_niftytotalmarket_list.csv',
+    resolve(__dirname, '../src/data/nifty750.json')
+  )
+
   // F&O stocks via Dhan scrip master (NSE changed fo_mktlots.csv to PDF)
   const foOutputFile = resolve(__dirname, '../src/data/niftyFO.json')
   try {
