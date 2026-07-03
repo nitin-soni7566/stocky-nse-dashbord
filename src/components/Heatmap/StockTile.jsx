@@ -39,15 +39,15 @@ export function StockTile({ stock }) {
   return (
     <Tooltip content={tooltipContent}>
       <div
-        className="rounded p-1.5 cursor-pointer transition-opacity hover:opacity-80 select-none"
-        style={{ backgroundColor: bg, color: fg, width: 76, minHeight: 44 }}
+        className="rounded-md p-2 cursor-pointer transition-opacity hover:opacity-80 select-none flex flex-col gap-0.5"
+        style={{ backgroundColor: bg, color: fg, width: 112, minHeight: 62 }}
       >
-        <div className="font-mono text-[10px] font-semibold leading-tight truncate">{stock.symbol}</div>
+        <div className="font-mono text-[12px] font-semibold leading-tight truncate">{stock.symbol}</div>
         {changePct != null && (
-          <div className="font-mono text-[10px] font-bold leading-tight">{formatChange(changePct, true)}</div>
+          <div className="font-mono text-[13px] font-bold leading-tight">{formatChange(changePct, true)}</div>
         )}
         {stock.sector && (
-          <div className="text-[8px] leading-tight truncate" style={{ opacity: 0.72 }}>{stock.sector}</div>
+          <div className="text-[9px] leading-tight truncate" style={{ opacity: 0.72 }}>{stock.sector}</div>
         )}
       </div>
     </Tooltip>
