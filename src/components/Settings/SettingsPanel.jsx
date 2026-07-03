@@ -38,7 +38,7 @@ export function SettingsPanel({ settings, onChange, onClose }) {
     try {
       const r = await fetch('/api/refresh-symbols', { method: 'POST' })
       const d = await r.json()
-      if (d.success) alert(`✅ Symbols refreshed: ${d.nifty200} + ${d.nifty500} stocks`)
+      if (d.success) alert(`✅ Symbols refreshed — Total ${d.nifty750}, 500 ${d.nifty500}, 200 ${d.nifty200}, F&O ${d.niftyFO}`)
       else alert('❌ Failed to refresh symbols')
     } catch {
       alert('❌ Server not reachable')
@@ -88,9 +88,11 @@ export function SettingsPanel({ settings, onChange, onClose }) {
               ↻ Refresh Symbols Now
             </button>
             <div className="text-xs text-[var(--text-muted)] space-y-1 pt-1">
-              <div>Nifty 200: <span className="text-[var(--text-secondary)]">200 symbols</span></div>
+              <div>Nifty Total: <span className="text-[var(--text-secondary)]">~750 symbols</span></div>
               <div>Nifty 500: <span className="text-[var(--text-secondary)]">500 symbols</span></div>
-              <div>Source: NSE India + Yahoo Finance</div>
+              <div>Nifty 200: <span className="text-[var(--text-secondary)]">200 symbols</span></div>
+              <div>F&O: <span className="text-[var(--text-secondary)]">eligible stocks</span></div>
+              <div>Source: NSE India + Upstox</div>
             </div>
           </Section>
 
@@ -106,7 +108,7 @@ export function SettingsPanel({ settings, onChange, onClose }) {
           <Section title="ABOUT">
             <div className="text-xs text-[var(--text-muted)] space-y-1">
               <div>Version: <span className="text-[var(--text-secondary)]">1.0.0</span></div>
-              <div>Data: NSE India + Yahoo Finance (free tier)</div>
+              <div>Data: NSE India + Upstox (live)</div>
               <div>Developer: <span className="text-[var(--accent)]">Nitin Soni</span></div>
               <a href="mailto:nitinsoni815@gmail.com" className="text-[var(--accent)] hover:underline block">nitinsoni815@gmail.com</a>
             </div>
@@ -114,7 +116,7 @@ export function SettingsPanel({ settings, onChange, onClose }) {
 
           <Section title="KEYBOARD SHORTCUTS">
             <div className="text-xs text-[var(--text-muted)] space-y-1 font-mono">
-              {[['1','Stock List'],['2','Scanner'],['3','Heatmap'],['R','Refresh data'],['S','Focus search'],['ESC','Close panels']].map(([k,v]) => (
+              {[['1','Sentiment'],['2','Stock List'],['3','Scanner'],['4','Heatmap'],['R','Refresh data'],['S','Focus search'],['ESC','Close panels']].map(([k,v]) => (
                 <div key={k} className="flex justify-between">
                   <span className="bg-[var(--bg-card)] border border-[var(--border)] px-1.5 py-0.5 rounded text-[var(--text-secondary)]">{k}</span>
                   <span className="text-[var(--text-secondary)]">{v}</span>
