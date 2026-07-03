@@ -368,6 +368,14 @@
     "series": "EQ"
   },
   {
+    "symbol": "AGL",
+    "yahooSymbol": "AGL.NS",
+    "name": "Allcargo Global Ltd.",
+    "sector": "Services",
+    "isin": "INE1YPB01014",
+    "series": "BE"
+  },
+  {
     "symbol": "ABDL",
     "yahooSymbol": "ABDL.NS",
     "name": "Allied Blenders and Distillers Ltd.",
@@ -1613,14 +1621,6 @@
     "name": "Dr. Reddy's Laboratories Ltd.",
     "sector": "Healthcare",
     "isin": "INE089A01031",
-    "series": "EQ"
-  },
-  {
-    "symbol": "DUMMYALCAR",
-    "yahooSymbol": "DUMMYALCAR.NS",
-    "name": "Dummy Allcargo Logistics Ltd.",
-    "sector": "Services",
-    "isin": "DUM418H01029",
     "series": "EQ"
   },
   {

@@ -2,12 +2,9 @@ import { useState, useEffect, useMemo } from 'react'
 import { fetchBulkQuotes } from '../../utils/upstoxApi.js'
 import { IndexCard } from './IndexCard.jsx'
 import { IndexDrawer } from './IndexDrawer.jsx'
-import { SectorBlock } from './SectorBlock.jsx'
-import { SectorModal } from './SectorModal.jsx'
-import { useHeatmap } from '../../hooks/useHeatmap.js'
+import { StockTile } from './StockTile.jsx'
 import { useStockData } from '../../hooks/useStockData.js'
 import { ErrorBoundary } from '../UI/ErrorBoundary.jsx'
-import { SkeletonCard } from '../UI/Skeleton.jsx'
 import nifty200 from '../../data/nifty200.json'
 import nifty500 from '../../data/nifty500.json'
 import niftyFO from '../../data/niftyFO.json'
@@ -103,26 +100,30 @@ function IndexHeatmap() {
 function StockHeatmap({ stockIndex }) {
   const symbols = STOCK_FILTER_INDICES[stockIndex]
   const { quotes, loading } = useStockData(symbols)
-  const sectors = useHeatmap(symbols, quotes)
-  const [modalData, setModalData] = useState(null)
+
+  // Flat grid — no sector grouping. Gainers first, no-data last.
+  const stocks = useMemo(() => symbols
+    .map(s => ({ ...s, quote: quotes[s.yahooSymbol] ?? null }))
+    .sort((a, b) => (b.quote?.changePct ?? -9999) - (a.quote?.changePct ?? -9999)),
+    [symbols, quotes])
 
   return (
-    <>
-      <div className="flex-1 overflow-auto p-3 md:p-4">
-        {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-            {Array.from({ length: 12 }).map((_, i) => <SkeletonCard key={i} />)}
+    <div className="flex-1 overflow-auto p-3 md:p-4">
+      {loading ? (
+        <div className="flex flex-wrap gap-1.5">
+          {Array.from({ length: 60 }).map((_, i) => (
+            <div key={i} className="skeleton rounded-md" style={{ width: 112, height: 62 }} />
+          ))}
+        </div>
+      ) : (
+        <>
+          <div className="text-xs text-[var(--text-muted)] mb-2">{stocks.length} stocks · sorted by change</div>
+          <div className="flex flex-wrap gap-1.5 content-start">
+            {stocks.map(stock => <StockTile key={stock.symbol} stock={stock} />)}
           </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-            {sectors.map(({ sector, stocks, avgChange, count }) => (
-              <SectorBlock key={sector} sector={sector} stocks={stocks} avgChange={avgChange} count={count} onClick={setModalData} />
-            ))}
-          </div>
-        )}
-      </div>
-      {modalData && <SectorModal sector={modalData.sector} stocks={modalData.stocks} onClose={() => setModalData(null)} />}
-    </>
+        </>
+      )}
+    </div>
   )
 }
 
