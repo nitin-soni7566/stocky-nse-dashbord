@@ -38,18 +38,21 @@ export function useSentimentData() {
   const [pageError, setPageError] = useState(false)
   const [sentiment, setSentiment] = useState({ score: null, label: null, color: '#888800', components: {} })
 
-  // ─── REST snapshot (index quotes + history + FII) ─────────────────────────────
+  // ─── REST snapshot (index quotes) ─────────────────────────────────────────────
+  // Uses the Upstox proxy (fetchBulkQuotes → /api/upstox/rest) which works in both
+  // dev (Express) and prod (Netlify function) — no dev-only endpoint dependency.
   const fetchQuotes = useCallback(async () => {
-    const res = await fetch('/api/sentiment/index-quotes')
-    const data = await res.json()
-    if (data.error) throw new Error(data.message)
+    const data = await fetchBulkQuotes(Object.values(INDEX_SYMBOLS))   // keyed by ^symbol
+    if (!Object.keys(data).length) throw new Error('no index quotes returned')
     setPageError(false)
     setIndices(prev => {
       const next = { ...prev }
-      for (const name of Object.keys(INDEX_SYMBOLS)) {
-        const q = data[name]
+      for (const [name, sym] of Object.entries(INDEX_SYMBOLS)) {
+        const q = data[sym]
         next[name] = q
-          ? { ...prev[name], ...q, loading: false, error: false, lastUpdated: Date.now() }
+          ? { ...prev[name], price: q.price, change: q.change, changePct: q.changePct,
+              open: q.open, high: q.high, low: q.low, prevClose: q.prevClose,
+              loading: false, error: false, lastUpdated: Date.now() }
           : { ...prev[name], loading: false, error: true }
       }
       next.giftNifty = { ...prev.giftNifty, loading: false, error: false }
