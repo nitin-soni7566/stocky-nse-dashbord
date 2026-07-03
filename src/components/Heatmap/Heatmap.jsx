@@ -7,6 +7,7 @@ import { useStockData } from '../../hooks/useStockData.js'
 import { ErrorBoundary } from '../UI/ErrorBoundary.jsx'
 import nifty200 from '../../data/nifty200.json'
 import nifty500 from '../../data/nifty500.json'
+import nifty750 from '../../data/nifty750.json'
 import niftyFO from '../../data/niftyFO.json'
 
 const NSE_INDICES = [
@@ -30,7 +31,7 @@ const NSE_INDICES = [
   { symbol: 'NIFTYIND.NS', name: 'NIFTY INDIA MFG' },
 ]
 
-const STOCK_FILTER_INDICES = { 'Nifty 200': nifty200, 'Nifty 500': nifty500 }
+const STOCK_FILTER_INDICES = { 'Nifty Total': nifty750, 'Nifty 500': nifty500, 'Nifty 200': nifty200 }
 if (niftyFO.length > 0) STOCK_FILTER_INDICES['F&O'] = niftyFO
 
 function IndexHeatmap() {
