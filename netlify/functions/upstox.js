@@ -22,12 +22,23 @@ exports.handler = async (event) => {
     return { statusCode: 503, headers: CORS, body: JSON.stringify({ error: 'Upstox not configured' }) }
   }
 
-  const upstoxPath = '/' + rest.slice('rest/'.length)
+  let upstoxPath = '/' + rest.slice('rest/'.length)
   if (!ALLOWED_PREFIXES.some(p => upstoxPath.startsWith(p))) {
     return { statusCode: 403, headers: CORS, body: JSON.stringify({ error: 'path not allowed' }) }
   }
 
-  const target = UPSTOX_BASE + upstoxPath + (event.rawQuery ? `?${event.rawQuery}` : '')
+  // Netlify may percent-decode event.path / query. Index instrument keys contain
+  // "|" and spaces (e.g. "NSE_INDEX|Nifty 50"), so re-encode reserved chars to keep
+  // the upstream URL valid. Rebuilding the query from queryStringParameters (which
+  // are decoded) guarantees correct encoding regardless of Netlify's behaviour.
+  upstoxPath = upstoxPath.split('/').map(seg => seg.replace(/\|/g, '%7C').replace(/ /g, '%20')).join('/')
+
+  const qsp = event.queryStringParameters || {}
+  const query = Object.keys(qsp).length
+    ? Object.entries(qsp).map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&')
+    : (event.rawQuery || '')
+
+  const target = UPSTOX_BASE + upstoxPath + (query ? `?${query}` : '')
   try {
     const res = await fetch(target, { headers: { Authorization: `Bearer ${token}`, Accept: 'application/json' } })
     const body = await res.text()
