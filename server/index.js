@@ -111,18 +111,20 @@ async function fetchFOSymbols(nifty500Lookup) {
 
 app.post('/api/refresh-symbols', async (req, res) => {
   try {
-    const [nifty200, nifty500] = await Promise.all([
+    const [nifty200, nifty500, nifty750] = await Promise.all([
       fetchNSESymbols('https://archives.nseindia.com/content/indices/ind_nifty200list.csv'),
-      fetchNSESymbols('https://archives.nseindia.com/content/indices/ind_nifty500list.csv')
+      fetchNSESymbols('https://archives.nseindia.com/content/indices/ind_nifty500list.csv'),
+      fetchNSESymbols('https://archives.nseindia.com/content/indices/ind_niftytotalmarket_list.csv')
     ])
     writeFileSync(resolve(__dirname, '../src/data/nifty200.json'), JSON.stringify(nifty200, null, 2))
     writeFileSync(resolve(__dirname, '../src/data/nifty500.json'), JSON.stringify(nifty500, null, 2))
+    writeFileSync(resolve(__dirname, '../src/data/nifty750.json'), JSON.stringify(nifty750, null, 2))
 
     const n500Lookup = new Map(nifty500.map(s => [s.symbol, s]))
     const niftyFO = await fetchFOSymbols(n500Lookup)
     writeFileSync(resolve(__dirname, '../src/data/niftyFO.json'), JSON.stringify(niftyFO, null, 2))
 
-    res.json({ success: true, nifty200: nifty200.length, nifty500: nifty500.length, niftyFO: niftyFO.length, updatedAt: new Date().toISOString() })
+    res.json({ success: true, nifty200: nifty200.length, nifty500: nifty500.length, nifty750: nifty750.length, niftyFO: niftyFO.length, updatedAt: new Date().toISOString() })
   } catch (err) {
     res.status(500).json({ success: false, error: err.message })
   }
