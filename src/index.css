@@ -15,6 +15,25 @@
   --green: #00C853;
   --red: #FF3D3D;
   --border: #2A2A2A;
+  --green-bg: #0d2818;
+  --red-bg: #2b0d0d;
+}
+
+:root[data-theme='light'] {
+  --bg-primary: #F7F8FA;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-hover: #F0F1F4;
+  --accent: #00A884;
+  --accent-dim: #008F70;
+  --text-primary: #14161A;
+  --text-secondary: #5B5F6A;
+  --text-muted: #96999F;
+  --green: #0A9E4C;
+  --red: #E0293D;
+  --border: #E4E6EA;
+  --green-bg: #E4F7EC;
+  --red-bg: #FCE8EA;
 }
 
 * {
@@ -29,6 +48,7 @@ html, body, #root {
   background: var(--bg-primary);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .font-mono, code, .price {

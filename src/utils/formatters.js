@@ -22,10 +22,10 @@ export function formatChange(value, isPercent = false) {
 }
 
 export function formatChangePct(value) {
-  if (value == null || isNaN(value)) return { text: '—', color: '#888888' }
-  if (value > 0) return { text: `▲ +${value.toFixed(2)}%`, color: '#00C853' }
-  if (value < 0) return { text: `▼ ${value.toFixed(2)}%`, color: '#FF3D3D' }
-  return { text: '— 0.00%', color: '#888888' }
+  if (value == null || isNaN(value)) return { text: '—', color: 'var(--text-secondary)' }
+  if (value > 0) return { text: `▲ +${value.toFixed(2)}%`, color: 'var(--green)' }
+  if (value < 0) return { text: `▼ ${value.toFixed(2)}%`, color: 'var(--red)' }
+  return { text: '— 0.00%', color: 'var(--text-secondary)' }
 }
 
 export function formatCrore(value) {

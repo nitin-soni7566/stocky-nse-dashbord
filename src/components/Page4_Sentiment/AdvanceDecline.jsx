@@ -3,7 +3,7 @@ import { GREEN, RED, GREY } from './common.jsx'
 
 const ROWS = [
   { key: 'nifty50', label: 'Nifty 50' },
-  { key: 'nifty500', label: 'Nifty 500' },
+  { key: 'broadMarket', label: 'Broad Market' },
   { key: 'niftyBank', label: 'Nifty Bank' }
 ]
 

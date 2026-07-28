@@ -3,9 +3,10 @@ import { createContext, useContext, useReducer } from 'react'
 const AppContext = createContext(null)
 
 const initialState = {
-  activeView: 'sentiment',
+  activeView: 'dashboard',
   toasts: [],
-  marketStatus: { isOpen: false, session: 'closed' }
+  marketStatus: { isOpen: false, session: 'closed' },
+  detailSymbol: null
 }
 
 function reducer(state, action) {
@@ -18,6 +19,10 @@ function reducer(state, action) {
       return { ...state, toasts: state.toasts.filter(t => t.id !== action.payload) }
     case 'SET_MARKET_STATUS':
       return { ...state, marketStatus: action.payload }
+    case 'OPEN_STOCK_DETAIL':
+      return { ...state, detailSymbol: action.payload }
+    case 'CLOSE_STOCK_DETAIL':
+      return { ...state, detailSymbol: null }
     default:
       return state
   }

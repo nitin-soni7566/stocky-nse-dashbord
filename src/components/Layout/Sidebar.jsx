@@ -1,10 +1,11 @@
 import { useApp } from '../../context/AppContext.jsx'
 
 const NAV = [
-  { id: 'sentiment', icon: '🧠', label: 'Sentiment', hint: '1' },
-  { id: 'stocklist', icon: '📊', label: 'Stock List', hint: '2' },
-  { id: 'scanner', icon: '📡', label: 'Scanner', hint: '3' },
-  { id: 'heatmap', icon: '🌡️', label: 'Heatmap', hint: '4' }
+  { id: 'dashboard', icon: '🏠', label: 'Dashboard', hint: '1' },
+  { id: 'sentiment', icon: '🧠', label: 'Sentiment', hint: '2' },
+  { id: 'stocklist', icon: '📊', label: 'Stock List', hint: '3' },
+  { id: 'scanner', icon: '📡', label: 'Scanner', hint: '4' },
+  { id: 'heatmap', icon: '🌡️', label: 'Heatmap', hint: '5' }
 ]
 
 export function Sidebar() {

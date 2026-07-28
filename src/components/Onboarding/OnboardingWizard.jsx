@@ -13,7 +13,7 @@ const STEPS = [
   },
   {
     title: "You're all set! 🎉",
-    body: "Market opens at 9:15 AM IST. Here's what to do:\n• Page 1 (key 1): Monitor live prices across Nifty 200/500\n• Page 2 (key 2): Run Doji + 9:15 scanner at market open\n• Page 3 (key 3): Check sector heatmap for market mood",
+    body: "Market opens at 9:15 AM IST. Here's what to do:\n• Dashboard (key 1): Market summary, Top Gainers/Losers, breadth\n• Scanner (key 3): Run Doji + breakout + indicator scans at market open\n• Heatmap (key 4): Check sector heatmap for market mood",
     action: 'Open Dashboard →'
   }
 ]
@@ -33,8 +33,8 @@ export function OnboardingWizard({ onDone }) {
         .then(data => {
           if (data.success) {
             setSymbolLog(l => [...l,
-              `✅ Nifty 200: ${data.nifty200} stocks loaded`,
-              `✅ Nifty 500: ${data.nifty500} stocks loaded`,
+              `✅ Stock Universe: ${data.universe} stocks loaded`,
+              `✅ F&O: ${data.niftyFO} stocks loaded`,
               '🎯 Ready!'
             ])
           } else {

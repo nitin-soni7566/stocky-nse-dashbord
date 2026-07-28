@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, memo } from 'react'
 import { formatINR, formatVolume } from '../../utils/formatters.js'
 import { ChangePill, ChangeText } from '../UI/ChangePill.jsx'
 
-export function StockRow({ index, stock, quote, onClick }) {
+export const StockRow = memo(function StockRow({ index, stock, quote, onClick, isFavorite, onToggleFavorite }) {
   const [flash, setFlash] = useState(null)
   const prevPrice = useRef(null)
 
@@ -28,7 +28,17 @@ export function StockRow({ index, stock, quote, onClick }) {
     >
       <td className="px-3 py-2.5 text-xs text-[var(--text-muted)] w-10">{index + 1}</td>
       <td className="px-3 py-2.5">
-        <span className="font-mono font-semibold text-sm text-[var(--accent)]">{stock.symbol}</span>
+        <div className="flex items-center gap-1.5">
+          {onToggleFavorite && (
+            <button
+              onClick={e => { e.stopPropagation(); onToggleFavorite(stock.symbol) }}
+              className={`text-sm leading-none ${isFavorite ? 'text-yellow-400' : 'text-[var(--text-muted)] hover:text-yellow-400'}`}
+            >
+              {isFavorite ? '★' : '☆'}
+            </button>
+          )}
+          <span className="font-mono font-semibold text-sm text-[var(--accent)]">{stock.symbol}</span>
+        </div>
       </td>
       <td className="px-3 py-2.5 text-xs text-[var(--text-secondary)] max-w-[200px] truncate">{stock.name}</td>
       <td className="px-3 py-2.5 font-mono text-sm text-right text-[var(--text-primary)]">
@@ -54,4 +64,4 @@ export function StockRow({ index, stock, quote, onClick }) {
       </td>
     </tr>
   )
-}
+})

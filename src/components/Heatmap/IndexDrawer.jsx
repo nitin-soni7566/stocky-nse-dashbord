@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { fetchBulkQuotes } from '../../utils/upstoxApi.js'
 import { formatINR, formatVolume, formatChangePct } from '../../utils/formatters.js'
 import { ChangePill, ChangeText } from '../UI/ChangePill.jsx'
-import nifty500 from '../../data/nifty500.json'
+import { ALL_STOCKS } from '../../utils/instruments.js'
 
 function getTileColor(pct) {
   if (pct == null) return '#2A2A2A'
@@ -41,7 +41,7 @@ export function IndexDrawer({ index, quote, onClose }) {
   const [loading, setLoading] = useState(true)
 
   const filterFn = INDEX_SECTOR_FILTER[index.symbol] ?? (() => true)
-  const stocks = nifty500.filter(filterFn).slice(0, 80)
+  const stocks = ALL_STOCKS.filter(filterFn).slice(0, 80)
 
   useEffect(() => {
     setLoading(true)

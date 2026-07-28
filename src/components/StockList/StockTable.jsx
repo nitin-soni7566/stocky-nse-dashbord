@@ -3,7 +3,7 @@ import { StockRow } from './StockRow.jsx'
 
 const COL_HEADERS = ['#', 'Symbol', 'Company', 'Price (₹)', 'Chg (₹)', 'Chg %', 'High', 'Low', 'Volume', 'Prev Close']
 
-export function StockTable({ stocks, quotes, prevQuotes, loading, onRowClick }) {
+export function StockTable({ stocks, quotes, prevQuotes, loading, onRowClick, isFavorite, onToggleFavorite }) {
   if (loading && stocks.length === 0) {
     return (
       <div className="flex-1 overflow-auto">
@@ -33,6 +33,8 @@ export function StockTable({ stocks, quotes, prevQuotes, loading, onRowClick }) 
                 quote={quotes[stock.yahooSymbol] ?? null}
                 prevQuote={prevQuotes?.[stock.yahooSymbol] ?? null}
                 onClick={onRowClick}
+                isFavorite={isFavorite?.(stock.symbol)}
+                onToggleFavorite={onToggleFavorite}
               />
             ))}
           </tbody>

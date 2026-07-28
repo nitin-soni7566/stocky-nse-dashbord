@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { fetchBulkQuotes, fetchOHLCHistory, getUpstoxStatus, subscribeQuotes } from '../utils/upstoxApi.js'
 import { isMarketOpen } from '../utils/marketHours.js'
-import nifty500 from '../data/nifty500.json'
+import { ALL_STOCKS } from '../utils/instruments.js'
 
 // normalized name → our internal index symbol (resolved to Upstox keys via instruments.js)
 const INDEX_SYMBOLS = {
@@ -25,9 +25,9 @@ function initialIndices() {
 export function useSentimentData() {
   const [indices, setIndices] = useState(initialIndices)
   const [adData, setAdData] = useState({
-    nifty50:   { advancers: 0, decliners: 0, unchanged: 0, changePct: 0 },
-    nifty500:  { advancers: 0, decliners: 0, unchanged: 0, changePct: 0 },
-    niftyBank: { advancers: 0, decliners: 0, unchanged: 0, changePct: 0 }
+    nifty50:     { advancers: 0, decliners: 0, unchanged: 0, changePct: 0 },
+    broadMarket: { advancers: 0, decliners: 0, unchanged: 0, changePct: 0 },
+    niftyBank:   { advancers: 0, decliners: 0, unchanged: 0, changePct: 0 }
   })
   const [stockQuotes, setStockQuotes] = useState(null)   // null = not loaded yet
   const [niftyHistory, setNiftyHistory] = useState([])
@@ -89,10 +89,10 @@ export function useSentimentData() {
     } catch (err) { console.error('FII fetch failed:', err); setFiiError(true) }
   }, [fetchQuotes])
 
-  // ─── A/D stock quotes (Nifty 500 snapshot) ────────────────────────────────────
+  // ─── A/D stock quotes (broad-market snapshot) ─────────────────────────────────
   const fetchStocks = useCallback(async () => {
     try {
-      const data = await fetchBulkQuotes(nifty500.map(s => s.yahooSymbol))
+      const data = await fetchBulkQuotes(ALL_STOCKS.map(s => s.yahooSymbol))
       if (Object.keys(data).length) setStockQuotes(data)
     } catch (err) { console.error('Stock quotes failed:', err) }
   }, [])
@@ -143,7 +143,7 @@ export function useSentimentData() {
     return () => cleanup()
   }, [fetchQuotes])
 
-  // ─── Compute Advance/Decline from Nifty 500 snapshot ──────────────────────────
+  // ─── Compute Advance/Decline from the broad-market snapshot ───────────────────
   useEffect(() => {
     if (!stockQuotes) return
     const quoteFor = s => stockQuotes[s.yahooSymbol]
@@ -157,10 +157,10 @@ export function useSentimentData() {
       }
     }
 
-    const n500 = { ...tally(nifty500), changePct: indices.nifty50.changePct ?? 0 }
-    const bank = { ...tally(nifty500.filter(s => s.sector === 'Financial Services')), changePct: indices.bankNifty.changePct ?? 0 }
-    const n50 = { ...tally(nifty500.slice(0, 50)), changePct: indices.nifty50.changePct ?? 0 }
-    setAdData({ nifty50: n50, nifty500: n500, niftyBank: bank })
+    const broad = { ...tally(ALL_STOCKS), changePct: indices.nifty50.changePct ?? 0 }
+    const bank = { ...tally(ALL_STOCKS.filter(s => s.sector === 'Financial Services')), changePct: indices.bankNifty.changePct ?? 0 }
+    const n50 = { ...tally(ALL_STOCKS.slice(0, 50)), changePct: indices.nifty50.changePct ?? 0 }
+    setAdData({ nifty50: n50, broadMarket: broad, niftyBank: bank })
   }, [stockQuotes, indices.nifty50.changePct, indices.bankNifty.changePct])
 
   // ─── Sentiment score ──────────────────────────────────────────────────────────
@@ -169,8 +169,8 @@ export function useSentimentData() {
     const niftyPrice = indices.nifty50.price
     if (vix == null || !stockQuotes) return
 
-    const total = adData.nifty500.advancers + adData.nifty500.decliners
-    const adScore = total > 0 ? Math.round((adData.nifty500.advancers / total) * 100) : 50
+    const total = adData.broadMarket.advancers + adData.broadMarket.decliners
+    const adScore = total > 0 ? Math.round((adData.broadMarket.advancers / total) * 100) : 50
 
     const vixScore = vix < 12 ? 90 : vix < 15 ? 70 : vix < 20 ? 50 : vix < 25 ? 30 : 10
 
@@ -195,7 +195,7 @@ export function useSentimentData() {
       label,
       color,
       components: {
-        advanceDecline: { score: adScore, value: `${adData.nifty500.advancers}↑ ${adData.nifty500.decliners}↓` },
+        advanceDecline: { score: adScore, value: `${adData.broadMarket.advancers}↑ ${adData.broadMarket.decliners}↓` },
         vix: { score: vixScore, value: vix.toFixed(2) },
         dma200: { score: dmaScore, value: dmaPct == null ? '—' : `${dmaPct >= 0 ? '+' : ''}${dmaPct.toFixed(1)}%` },
         fiiFlow: { score: fiiScore, value: lastFii == null ? '—' : `${lastFii >= 0 ? '+' : '-'}${Math.abs(lastFii).toFixed(0)}Cr` }

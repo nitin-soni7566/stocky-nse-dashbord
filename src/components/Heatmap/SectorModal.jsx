@@ -1,7 +1,12 @@
 import { useEffect } from 'react'
 import { formatINR, formatChange } from '../../utils/formatters.js'
+import { StockCard } from '../UI/StockCard.jsx'
+import { VirtualCardList } from '../UI/VirtualCardList.jsx'
+import { useWatchlist } from '../../hooks/useWatchlist.js'
 
-export function SectorModal({ sector, stocks, onClose }) {
+export function SectorModal({ sector, stocks, onClose, onSelect }) {
+  const { isFavorite, toggle: toggleFavorite } = useWatchlist()
+
   useEffect(() => {
     const handler = e => { if (e.key === 'Escape') onClose() }
     window.addEventListener('keydown', handler)
@@ -23,7 +28,24 @@ export function SectorModal({ sector, stocks, onClose }) {
           </div>
           <button onClick={onClose} className="text-2xl text-[var(--text-muted)] hover:text-[var(--text-primary)] leading-none">×</button>
         </div>
-        <div className="overflow-auto flex-1">
+        {/* Mobile: card stack, no horizontal scroll */}
+        <div className="md:hidden flex-1 flex flex-col overflow-hidden p-3">
+          <VirtualCardList
+            items={sorted}
+            itemHeight={118}
+            renderItem={s => (
+              <StockCard
+                stock={s}
+                quote={s.quote}
+                isFavorite={isFavorite(s.symbol)}
+                onToggleFavorite={toggleFavorite}
+                onClick={stock => onSelect?.(stock.symbol)}
+              />
+            )}
+          />
+        </div>
+
+        <div className="hidden md:block overflow-auto flex-1">
           <table className="w-full min-w-[600px]">
             <thead className="sticky top-0 bg-[var(--bg-secondary)]">
               <tr className="border-b border-[var(--border)]">
@@ -37,7 +59,11 @@ export function SectorModal({ sector, stocks, onClose }) {
                 const q = s.quote
                 const pct = q?.changePct ?? null
                 return (
-                  <tr key={s.symbol} className="border-b border-[var(--border)] hover:bg-[var(--bg-hover)] transition-colors">
+                  <tr
+                    key={s.symbol}
+                    onClick={() => onSelect?.(s.symbol)}
+                    className={`border-b border-[var(--border)] hover:bg-[var(--bg-hover)] transition-colors ${onSelect ? 'cursor-pointer' : ''}`}
+                  >
                     <td className="px-4 py-3 font-mono font-semibold text-sm text-[var(--accent)]">{s.symbol}</td>
                     <td className="px-4 py-3 text-xs text-[var(--text-secondary)] max-w-[180px] truncate">{s.name}</td>
                     <td className="px-4 py-3 font-mono text-sm text-[var(--text-primary)]">{q?.price != null ? formatINR(q.price) : '—'}</td>

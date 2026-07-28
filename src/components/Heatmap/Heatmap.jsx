@@ -4,10 +4,9 @@ import { IndexCard } from './IndexCard.jsx'
 import { IndexDrawer } from './IndexDrawer.jsx'
 import { StockTile } from './StockTile.jsx'
 import { useStockData } from '../../hooks/useStockData.js'
+import { useGainersLosers } from '../../hooks/useGainersLosers.js'
 import { ErrorBoundary } from '../UI/ErrorBoundary.jsx'
-import nifty200 from '../../data/nifty200.json'
-import nifty500 from '../../data/nifty500.json'
-import nifty750 from '../../data/nifty750.json'
+import { useApp } from '../../context/AppContext.jsx'
 import niftyFO from '../../data/niftyFO.json'
 
 const NSE_INDICES = [
@@ -30,9 +29,6 @@ const NSE_INDICES = [
   { symbol: '^CNX500', name: 'NIFTY 500' },
   { symbol: 'NIFTYIND.NS', name: 'NIFTY INDIA MFG' },
 ]
-
-const STOCK_FILTER_INDICES = { 'Nifty Total': nifty750, 'Nifty 500': nifty500, 'Nifty 200': nifty200 }
-if (niftyFO.length > 0) STOCK_FILTER_INDICES['F&O'] = niftyFO
 
 function IndexHeatmap() {
   const [quotes, setQuotes] = useState({})
@@ -98,18 +94,22 @@ function IndexHeatmap() {
   )
 }
 
-function StockHeatmap({ stockIndex }) {
-  const symbols = STOCK_FILTER_INDICES[stockIndex]
-  const { quotes, loading } = useStockData(symbols)
+function StockHeatmap({ mode, onSelectStock }) {
+  const { gainers, losers, loading: rankLoading } = useGainersLosers()
+  const { quotes: foQuotes, loading: foLoading } = useStockData(niftyFO)
+
+  const loading = mode === 'F&O' ? foLoading : rankLoading
 
   // Flat grid — no sector grouping. Gainers first, no-data last.
-  const stocks = useMemo(() => symbols
-    .map(s => ({ ...s, quote: quotes[s.yahooSymbol] ?? null }))
-    .sort((a, b) => (b.quote?.changePct ?? -9999) - (a.quote?.changePct ?? -9999)),
-    [symbols, quotes])
+  const stocks = useMemo(() => {
+    const base = mode === 'Gainers' ? gainers
+      : mode === 'Losers' ? losers
+      : niftyFO.map(s => ({ ...s, quote: foQuotes[s.yahooSymbol] ?? null }))
+    return [...base].sort((a, b) => (b.quote?.changePct ?? -9999) - (a.quote?.changePct ?? -9999))
+  }, [mode, gainers, losers, foQuotes])
 
   return (
-    <div className="flex-1 overflow-auto p-3 md:p-4">
+    <div className="flex-1 overflow-auto p-3">
       {loading ? (
         <div className="flex flex-wrap gap-1.5">
           {Array.from({ length: 60 }).map((_, i) => (
@@ -120,7 +120,9 @@ function StockHeatmap({ stockIndex }) {
         <>
           <div className="text-xs text-[var(--text-muted)] mb-2">{stocks.length} stocks · sorted by change</div>
           <div className="flex flex-wrap gap-1.5 content-start">
-            {stocks.map(stock => <StockTile key={stock.symbol} stock={stock} />)}
+            {stocks.map(stock => (
+              <StockTile key={stock.symbol} stock={stock} onClick={s => onSelectStock(s.symbol)} />
+            ))}
           </div>
         </>
       )}
@@ -130,7 +132,9 @@ function StockHeatmap({ stockIndex }) {
 
 export function Heatmap() {
   const [mode, setMode] = useState('indices')
-  const [stockIndex, setStockIndex] = useState('Nifty 500')
+  const [stockMode, setStockMode] = useState('Gainers')
+  const { dispatch } = useApp()
+  const openDetail = symbol => dispatch({ type: 'OPEN_STOCK_DETAIL', payload: symbol })
 
   return (
     <ErrorBoundary>
@@ -151,21 +155,21 @@ export function Heatmap() {
 
           {mode === 'stocks' && (
             <div className="flex gap-1 ml-2">
-              {Object.keys(STOCK_FILTER_INDICES).map(idx => (
+              {['Gainers', 'Losers', 'F&O'].map(idx => (
                 <button
                   key={idx}
-                  onClick={() => setStockIndex(idx)}
+                  onClick={() => setStockMode(idx)}
                   className={`px-2.5 py-1 rounded text-xs transition-colors border
-                    ${stockIndex === idx ? 'border-[var(--accent)] text-[var(--accent)]' : 'border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)]'}`}
+                    ${stockMode === idx ? 'border-[var(--accent)] text-[var(--accent)]' : 'border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)]'}`}
                 >
-                  {idx}
+                  {idx === 'Gainers' ? '📈 Gainers' : idx === 'Losers' ? '📉 Losers' : '⚙️ F&O'}
                 </button>
               ))}
             </div>
           )}
         </div>
 
-        {mode === 'indices' ? <IndexHeatmap /> : <StockHeatmap stockIndex={stockIndex} />}
+        {mode === 'indices' ? <IndexHeatmap /> : <StockHeatmap mode={stockMode} onSelectStock={openDetail} />}
       </div>
     </ErrorBoundary>
   )

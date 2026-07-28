@@ -1,9 +1,12 @@
 // Maps our internal symbols <-> Upstox instrument keys.
 //   Equities: yahooSymbol "RELIANCE.NS"  <->  "NSE_EQ|<ISIN>"   (ISIN comes from the JSON)
 //   Indices:  "^NSEI" (etc.)             <->  "NSE_INDEX|<name>" (hardcoded, verified live)
-import nifty200 from '../data/nifty200.json'
-import nifty500 from '../data/nifty500.json'
+import niftyUniverse from '../data/niftyUniverse.json'
 import niftyFO from '../data/niftyFO.json'
+
+// The full NSE equity universe — sole source for symbol/ISIN resolution and the
+// basis for ranking Top Gainers/Losers. Not exposed to the UI by name/count.
+export const ALL_STOCKS = niftyUniverse
 
 // ^symbol -> Upstox index instrument key. Verified against the live Upstox API.
 export const INDEX_KEY_MAP = {
@@ -33,7 +36,7 @@ export const INDEX_KEY_MAP = {
 const _symToKey = new Map()   // "RELIANCE.NS" -> "NSE_EQ|INE002A01018"
 const _keyToSym = new Map()   // reverse
 
-for (const list of [nifty200, nifty500, niftyFO]) {
+for (const list of [niftyUniverse, niftyFO]) {
   for (const s of list) {
     if (!s.yahooSymbol || !s.isin) continue
     if (_symToKey.has(s.yahooSymbol)) continue
@@ -59,4 +62,14 @@ export function toInstrumentKey(symbol) {
 // Instrument key -> our symbol ("RELIANCE.NS" or "^NSEI").
 export function fromInstrumentKey(key) {
   return _keyToSym.get(key) ?? null
+}
+
+// symbol/name/sector lookup by our short `symbol` ("RELIANCE"), used by
+// components (e.g. StockDetailDrawer) that only carry the symbol string.
+const _stockBySymbol = new Map()
+for (const s of [...niftyUniverse, ...niftyFO]) {
+  if (!_stockBySymbol.has(s.symbol)) _stockBySymbol.set(s.symbol, s)
+}
+export function findStock(symbol) {
+  return _stockBySymbol.get(symbol) ?? null
 }

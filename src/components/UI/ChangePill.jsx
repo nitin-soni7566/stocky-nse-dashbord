@@ -5,7 +5,7 @@ export function ChangePill({ value }) {
     return <span className="font-mono text-[var(--text-muted)] text-xs">—</span>
   }
   const { text, color } = formatChangePct(value)
-  const bg = value > 0 ? '#0d2818' : value < 0 ? '#2b0d0d' : '#1a1a1a'
+  const bg = value > 0 ? 'var(--green-bg)' : value < 0 ? 'var(--red-bg)' : 'var(--bg-hover)'
   return (
     <span style={{
       background: bg,
@@ -24,7 +24,7 @@ export function ChangePill({ value }) {
 
 export function ChangeText({ value }) {
   if (value == null || isNaN(value)) return <span className="text-[var(--text-muted)]">—</span>
-  const color = value > 0 ? '#00C853' : value < 0 ? '#FF3D3D' : '#888888'
+  const color = value > 0 ? 'var(--green)' : value < 0 ? 'var(--red)' : 'var(--text-secondary)'
   const sign = value > 0 ? '+' : ''
   return (
     <span style={{ color, fontWeight: 'bold', fontFamily: "'JetBrains Mono', monospace" }}>

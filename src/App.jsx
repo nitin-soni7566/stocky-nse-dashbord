@@ -1,14 +1,20 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, lazy, Suspense } from 'react'
 import { useApp } from './context/AppContext.jsx'
 import { Header } from './components/Layout/Header.jsx'
 import { Sidebar } from './components/Layout/Sidebar.jsx'
 import { MarketBanner } from './components/Layout/MarketBanner.jsx'
-import { StockList } from './components/StockList/StockList.jsx'
-import { Scanner } from './components/Scanner/Scanner.jsx'
-import { Heatmap } from './components/Heatmap/Heatmap.jsx'
-import { SentimentPage } from './components/Page4_Sentiment/SentimentPage.jsx'
 import { OnboardingWizard } from './components/Onboarding/OnboardingWizard.jsx'
 import { SettingsPanel, loadSettings } from './components/Settings/SettingsPanel.jsx'
+import { StockDetailDrawer } from './components/StockDetail/StockDetailDrawer.jsx'
+import { PageSkeleton } from './components/UI/PageSkeleton.jsx'
+
+// Code-split per page — each is its own chunk, only fetched when the user
+// actually navigates there.
+const Dashboard = lazy(() => import('./components/Dashboard/Dashboard.jsx').then(m => ({ default: m.Dashboard })))
+const StockList = lazy(() => import('./components/StockList/StockList.jsx').then(m => ({ default: m.StockList })))
+const Scanner = lazy(() => import('./components/Scanner/Scanner.jsx').then(m => ({ default: m.Scanner })))
+const Heatmap = lazy(() => import('./components/Heatmap/Heatmap.jsx').then(m => ({ default: m.Heatmap })))
+const SentimentPage = lazy(() => import('./components/Page4_Sentiment/SentimentPage.jsx').then(m => ({ default: m.SentimentPage })))
 
 function Toast({ toast }) {
   const { dispatch } = useApp()
@@ -43,18 +49,18 @@ export default function App() {
   const handleKey = useCallback(e => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.metaKey || e.ctrlKey) return
     switch (e.key) {
-      case '1': dispatch({ type: 'SET_VIEW', payload: 'sentiment' }); break
-      case '2': dispatch({ type: 'SET_VIEW', payload: 'stocklist' }); break
-      case '3': dispatch({ type: 'SET_VIEW', payload: 'scanner' }); break
-      case '4': dispatch({ type: 'SET_VIEW', payload: 'heatmap' }); break
+      case '1': dispatch({ type: 'SET_VIEW', payload: 'dashboard' }); break
+      case '2': dispatch({ type: 'SET_VIEW', payload: 'sentiment' }); break
+      case '3': dispatch({ type: 'SET_VIEW', payload: 'stocklist' }); break
+      case '4': dispatch({ type: 'SET_VIEW', payload: 'scanner' }); break
+      case '5': dispatch({ type: 'SET_VIEW', payload: 'heatmap' }); break
       case 'r': case 'R': dispatch({ type: 'REFRESH_CURRENT' }); break
       case 's': case 'S':
-        if (state.activeView === 'stocklist') {
-          document.querySelector('input[type="text"]')?.focus()
-        }
+        document.querySelector('input[type="text"]')?.focus()
         break
       case 'Escape':
         setSettingsOpen(false)
+        dispatch({ type: 'CLOSE_STOCK_DETAIL' })
         break
     }
   }, [dispatch, state.activeView])
@@ -65,6 +71,7 @@ export default function App() {
   }, [handleKey])
 
   const views = {
+    dashboard: <Dashboard />,
     stocklist: <StockList />,
     scanner: <Scanner />,
     heatmap: <Heatmap />,
@@ -80,7 +87,9 @@ export default function App() {
         <Sidebar />
         <main className="flex-1 overflow-hidden flex flex-col pb-16 md:pb-0">
           <div className="flex-1 overflow-hidden">
-            {views[state.activeView] ?? <StockList />}
+            <Suspense fallback={<PageSkeleton />}>
+              {views[state.activeView] ?? <Dashboard />}
+            </Suspense>
           </div>
           <footer className="flex-shrink-0 border-t border-[var(--border)] px-4 md:px-6 py-2 flex items-center justify-end gap-3">
             <span className="text-xs text-[var(--text-muted)]">Developed by</span>
@@ -104,6 +113,13 @@ export default function App() {
           settings={settings}
           onChange={setSettings}
           onClose={() => setSettingsOpen(false)}
+        />
+      )}
+
+      {state.detailSymbol && (
+        <StockDetailDrawer
+          symbol={state.detailSymbol}
+          onClose={() => dispatch({ type: 'CLOSE_STOCK_DETAIL' })}
         />
       )}
     </div>

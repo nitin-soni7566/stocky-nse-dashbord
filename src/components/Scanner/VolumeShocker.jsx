@@ -1,15 +1,30 @@
 import { useState } from 'react'
 import { useVolumeShocker } from '../../hooks/useVolumeShocker.js'
+import { useGainersLosers } from '../../hooks/useGainersLosers.js'
 import { ScanProgress } from './ScanProgress.jsx'
 import { VolumeHeatmap } from './VolumeHeatmap.jsx'
 import { formatVolume, formatINR } from '../../utils/formatters.js'
 import { ChangePill } from '../UI/ChangePill.jsx'
-import nifty200 from '../../data/nifty200.json'
-import nifty500 from '../../data/nifty500.json'
+import { StockCard } from '../UI/StockCard.jsx'
+import { VirtualCardList } from '../UI/VirtualCardList.jsx'
+import { findStock } from '../../utils/instruments.js'
+import { useWatchlist } from '../../hooks/useWatchlist.js'
+import { useApp } from '../../context/AppContext.jsx'
 import niftyFO from '../../data/niftyFO.json'
 
-const INDICES = { 'Nifty 200': nifty200, 'Nifty 500': nifty500 }
-if (niftyFO.length > 0) INDICES['F&O'] = niftyFO
+function RatioBadge({ ratio }) {
+  return (
+    <span
+      className="font-mono font-bold text-[10px] px-2 py-0.5 rounded"
+      style={{
+        backgroundColor: ratio >= 5 ? '#3b0764' : ratio >= 3 ? '#1e1b4b' : '#0c1a2e',
+        color: ratio >= 5 ? '#c084fc' : ratio >= 3 ? '#818cf8' : '#60a5fa'
+      }}
+    >
+      {ratio.toFixed(1)}x VOL
+    </span>
+  )
+}
 
 const THRESHOLD_OPTIONS = [
   { value: 1.5, label: '1.5x+' },
@@ -18,11 +33,19 @@ const THRESHOLD_OPTIONS = [
   { value: 5, label: '5x+' },
 ]
 
+const TABS = ['Gainers', 'Losers', 'F&O']
+
 export function VolumeShocker() {
-  const [selectedIndex, setSelectedIndex] = useState('Nifty 200')
+  const [selectedIndex, setSelectedIndex] = useState('Gainers')
   const [threshold, setThreshold] = useState(2)
   const [infoOpen, setInfoOpen] = useState(false)
   const { results, scanning, progress, timeRemaining, runScan, cancel } = useVolumeShocker()
+  const { gainers, losers } = useGainersLosers()
+  const { isFavorite, toggle: toggleFavorite } = useWatchlist()
+  const { dispatch } = useApp()
+  const openDetail = symbol => dispatch({ type: 'OPEN_STOCK_DETAIL', payload: symbol })
+
+  const INDICES = { Gainers: gainers, Losers: losers, 'F&O': niftyFO }
 
   const handleRun = () => {
     const symbols = INDICES[selectedIndex]
@@ -54,9 +77,9 @@ export function VolumeShocker() {
 
       <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-start sm:items-end">
         <div>
-          <label className="block text-xs text-[var(--text-muted)] mb-2 uppercase tracking-wider">Index</label>
+          <label className="block text-xs text-[var(--text-muted)] mb-2 uppercase tracking-wider">Universe</label>
           <div className="flex gap-2 flex-wrap">
-            {Object.keys(INDICES).map(idx => (
+            {TABS.map(idx => (
               <button
                 key={idx}
                 onClick={() => setSelectedIndex(idx)}
@@ -110,7 +133,29 @@ export function VolumeShocker() {
             Found <span className="text-[var(--text-primary)] font-semibold">{results.length}</span> stocks with volume ≥ {threshold}x average
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Mobile: card stack, no horizontal scroll */}
+          <div className="md:hidden flex flex-col" style={{ height: Math.min(results.length * 128, 480) }}>
+            <VirtualCardList
+              items={results}
+              itemHeight={118}
+              renderItem={s => {
+                const stock = findStock(s.symbol)
+                if (!stock) return null
+                return (
+                  <StockCard
+                    stock={stock}
+                    quote={{ price: s.price, changePct: s.changePct, volume: s.todayVolume }}
+                    isFavorite={isFavorite(stock.symbol)}
+                    onToggleFavorite={toggleFavorite}
+                    onClick={() => openDetail(stock.symbol)}
+                    extra={<RatioBadge ratio={s.volumeRatio} />}
+                  />
+                )
+              }}
+            />
+          </div>
+
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-xs">
               <thead className="sticky top-0 bg-[var(--bg-card)]">
                 <tr className="border-b border-[var(--border)]">

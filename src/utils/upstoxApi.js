@@ -85,9 +85,19 @@ export async function fetchBulkQuotes(symbols) {
   return results
 }
 
+// Short-lived in-memory cache so components that mount/unmount frequently
+// (StockCard grids, tab switches) don't refetch the same symbol's history
+// within a few seconds of each other.
+const HISTORY_CACHE_TTL = 30000
+const _historyCache = new Map()   // "SYM.NS:days" -> { data, at }
+
 // Daily OHLC history, oldest→newest, with today's live candle appended (Upstox
 // historical excludes the current day). `days` counts total candles incl. today.
 export async function fetchOHLCHistory(symbol, days = 5) {
+  const cacheKey = `${symbol}:${days}`
+  const cached = _historyCache.get(cacheKey)
+  if (cached && Date.now() - cached.at < HISTORY_CACHE_TTL) return cached.data
+
   const key = toInstrumentKey(symbol)
   if (!key) return null
 
@@ -118,7 +128,9 @@ export async function fetchOHLCHistory(symbol, days = 5) {
       volume: q.volume ?? null
     })
   }
-  return history.length ? history : null
+  const result = history.length ? history : null
+  _historyCache.set(cacheKey, { data: result, at: Date.now() })
+  return result
 }
 
 // Today's 1-minute intraday candles, oldest→newest, with an istTime "HH:MM" per candle.
