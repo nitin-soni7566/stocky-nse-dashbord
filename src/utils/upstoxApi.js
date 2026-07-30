@@ -7,7 +7,12 @@
 import { toInstrumentKey, fromInstrumentKey } from './instruments.js'
 
 const REST = '/api/upstox/rest'
-const QUOTE_BATCH = 500   // Upstox market-quote/quotes hard limit
+// Upstox allows up to 500 instrument keys/request, but that produces a ~12KB query
+// string which CloudFront/API Gateway (fronting Netlify Functions in prod) rejects
+// with 414 Request-URI Too Long — Express in dev tolerates it (raised
+// --max-http-header-size) so this only broke in production. Keep batches small
+// enough to stay well under the ~8KB URL limit.
+const QUOTE_BATCH = 200
 
 function delay(ms) {
   return new Promise(r => setTimeout(r, ms))
