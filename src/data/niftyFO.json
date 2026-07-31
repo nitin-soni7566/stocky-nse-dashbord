@@ -171,11 +171,11 @@
     "lotSize": 625
   },
   {
-    "symbol": "BAJAJ",
-    "yahooSymbol": "BAJAJ.NS",
-    "name": "BAJAJ",
-    "sector": "Unknown",
-    "isin": "",
+    "symbol": "BAJAJ-AUTO",
+    "yahooSymbol": "BAJAJ-AUTO.NS",
+    "name": "Bajaj Auto Ltd.",
+    "sector": "Automobile and Auto Components",
+    "isin": "INE917I01010",
     "series": "EQ",
     "lotSize": 75
   },
@@ -1197,11 +1197,11 @@
     "lotSize": 275
   },
   {
-    "symbol": "NAM",
-    "yahooSymbol": "NAM.NS",
-    "name": "NAM",
-    "sector": "Unknown",
-    "isin": "",
+    "symbol": "NAM-INDIA",
+    "yahooSymbol": "NAM-INDIA.NS",
+    "name": "Nippon Life India Asset Management Ltd.",
+    "sector": "Financial Services",
+    "isin": "INE298J01013",
     "series": "EQ",
     "lotSize": 625
   },

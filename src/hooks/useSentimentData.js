@@ -112,7 +112,14 @@ export function useSentimentData() {
     fetchInitialData()
     fetchStocks()
     const slow = setInterval(fetchInitialData, 3 * 60 * 1000)
-    const stocks = setInterval(() => { if (isMarketOpen()) fetchStocks() }, 30 * 1000)
+    // While closed, heartbeat once/3min instead of stopping entirely — self-heals
+    // a failed initial fetchStocks() so A/D data doesn't get stuck empty until reload.
+    let closedTicks = 0
+    const stocks = setInterval(() => {
+      if (isMarketOpen()) { closedTicks = 0; fetchStocks(); return }
+      closedTicks++
+      if (closedTicks % 6 === 0) fetchStocks()
+    }, 30 * 1000)
     return () => { clearInterval(slow); clearInterval(stocks) }
   }, [fetchInitialData, fetchStocks])
 

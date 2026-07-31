@@ -5,8 +5,10 @@ import { IndexDrawer } from './IndexDrawer.jsx'
 import { StockTile } from './StockTile.jsx'
 import { useStockData } from '../../hooks/useStockData.js'
 import { useGainersLosers } from '../../hooks/useGainersLosers.js'
+import { usePDHBreakout } from '../../hooks/usePDHBreakout.js'
 import { ErrorBoundary } from '../UI/ErrorBoundary.jsx'
 import { useApp } from '../../context/AppContext.jsx'
+import { PDH_BREAKOUT_COLOR } from '../../utils/heatColor.js'
 import niftyFO from '../../data/niftyFO.json'
 
 const NSE_INDICES = [
@@ -27,7 +29,7 @@ const NSE_INDICES = [
   { symbol: '^NSEI', name: 'NIFTY 50' },
   { symbol: '^CNX100', name: 'NIFTY 100' },
   { symbol: '^CNX500', name: 'NIFTY 500' },
-  { symbol: 'NIFTYIND.NS', name: 'NIFTY INDIA MFG' },
+  { symbol: '^CNXINDMFG', name: 'NIFTY INDIA MFG' },
 ]
 
 function IndexHeatmap() {
@@ -51,8 +53,7 @@ function IndexHeatmap() {
   ), [quotes])
 
   const advancing = sorted.filter(i => (quotes[i.symbol]?.changePct ?? 0) > 0).length
-  const declining = sorted.filter(i => (quotes[i.symbol]?.changePct ?? 0) < 0).length
-  const unchanged = sorted.filter(i => quotes[i.symbol]?.changePct === 0).length
+  const declining = sorted.filter(i => (quotes[i.symbol]?.changePct ?? 0) <= 0).length
   const best = sorted[0], worst = sorted[sorted.length - 1]
 
   return (
@@ -61,7 +62,6 @@ function IndexHeatmap() {
         <div className="px-3 py-2 border-b border-[var(--border)] text-xs text-[var(--text-secondary)] flex flex-wrap gap-x-4 gap-y-1 flex-shrink-0">
           <span>📈 Advancing: <span className="text-green-400 font-semibold">{advancing}</span></span>
           <span>📉 Declining: <span className="text-red-400 font-semibold">{declining}</span></span>
-          <span>➡️ Unchanged: <span className="text-[var(--text-muted)] font-semibold">{unchanged}</span></span>
           {best && quotes[best.symbol]?.changePct != null && (
             <span className="hidden sm:inline">| Best: <span className="text-green-400 font-semibold">{best.name} +{quotes[best.symbol].changePct.toFixed(2)}%</span></span>
           )}
@@ -100,13 +100,26 @@ function StockHeatmap({ mode, onSelectStock }) {
 
   const loading = mode === 'F&O' ? foLoading : rankLoading
 
-  // Flat grid — no sector grouping. Gainers first, no-data last.
+  // Flat grid — no sector grouping. Gainers/Losers already come pre-sorted in the
+  // right direction from useGainersLosers (biggest gainer / biggest loser first) —
+  // re-sorting descending here would flip Losers back to least-negative-first, so
+  // only the (unsorted) F&O list needs sorting.
   const stocks = useMemo(() => {
-    const base = mode === 'Gainers' ? gainers
-      : mode === 'Losers' ? losers
-      : niftyFO.map(s => ({ ...s, quote: foQuotes[s.yahooSymbol] ?? null }))
-    return [...base].sort((a, b) => (b.quote?.changePct ?? -9999) - (a.quote?.changePct ?? -9999))
+    if (mode === 'Gainers') return gainers
+    if (mode === 'Losers') return losers
+    return [...niftyFO.map(s => ({ ...s, quote: foQuotes[s.yahooSymbol] ?? null }))]
+      .sort((a, b) => (b.quote?.changePct ?? -9999) - (a.quote?.changePct ?? -9999))
   }, [mode, gainers, losers, foQuotes])
+
+  // Scoped to whatever's currently on screen (not the full universe) — bounds
+  // the network work while still applying the rule under every filter. Losers get
+  // the symmetric breakdown condition (fresh low, not fresh high) — checking for
+  // new highs on a list of declining stocks doesn't make sense.
+  const pdhMode = mode === 'Losers' ? 'breakdown' : 'breakout'
+  const pdhBreakouts = usePDHBreakout(stocks, pdhMode)
+  const pdhLegendText = pdhMode === 'breakdown'
+    ? 'Purple = Previous Day Low broken during 9:30 AM candle'
+    : 'Purple = Previous Day High broken during 9:30 AM candle'
 
   return (
     <div className="flex-1 overflow-auto p-3">
@@ -118,10 +131,25 @@ function StockHeatmap({ mode, onSelectStock }) {
         </div>
       ) : (
         <>
-          <div className="text-xs text-[var(--text-muted)] mb-2">{stocks.length} stocks · sorted by change</div>
+          <div className="flex items-center justify-between gap-2 flex-wrap mb-2">
+            <div className="text-xs text-[var(--text-muted)]">{stocks.length} stocks · sorted by change</div>
+            <div
+              className="flex items-center gap-1.5 text-[10px] text-[var(--text-muted)]"
+              title={pdhLegendText}
+            >
+              <span className="inline-block w-2.5 h-2.5 rounded-sm flex-shrink-0" style={{ background: PDH_BREAKOUT_COLOR }} />
+              {pdhLegendText}
+            </div>
+          </div>
           <div className="flex flex-wrap gap-1.5 content-start">
             {stocks.map(stock => (
-              <StockTile key={stock.symbol} stock={stock} onClick={s => onSelectStock(s.symbol)} />
+              <StockTile
+                key={stock.symbol}
+                stock={stock}
+                onClick={s => onSelectStock(s.symbol)}
+                pdhBroken={pdhBreakouts.has(stock.yahooSymbol)}
+                pdhLabel={pdhMode === 'breakdown' ? 'PDL broken (9:30 candle)' : 'PDH broken (9:30 candle)'}
+              />
             ))}
           </div>
         </>

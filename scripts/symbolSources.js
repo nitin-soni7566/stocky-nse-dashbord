@@ -35,7 +35,11 @@ export async function fetchFOSymbols(universeLookup) {
   const lotMap = new Map()
   for (const r of records) {
     if (r.SEM_INSTRUMENT_NAME !== 'FUTSTK' || r.SEM_EXM_EXCH_ID !== 'NSE') continue
-    const base = (r.SEM_TRADING_SYMBOL || '').split('-')[0].trim()
+    // Trading symbols are "<BASE>-<Mon><YYYY>-FUT" — strip that suffix rather than
+    // splitting on the first "-", which mangles tickers whose own name contains a
+    // hyphen (e.g. "BAJAJ-AUTO-Oct2026-FUT" → "BAJAJ" instead of "BAJAJ-AUTO",
+    // "NAM-INDIA-Oct2026-FUT" → "NAM" instead of "NAM-INDIA").
+    const base = (r.SEM_TRADING_SYMBOL || '').replace(/-[A-Za-z]{3}\d{4}-FUT$/, '').trim()
     if (!base || /^\d/.test(base) || base.includes('TEST') || base.includes('NSETEST')) continue
     if (!lotMap.has(base)) lotMap.set(base, parseFloat(r.SEM_LOT_UNITS) || null)
   }

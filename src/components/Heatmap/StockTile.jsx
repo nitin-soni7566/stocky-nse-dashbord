@@ -1,13 +1,13 @@
 import { memo } from 'react'
 import { Tooltip } from '../UI/Tooltip.jsx'
 import { formatINR, formatChange } from '../../utils/formatters.js'
-import { getHeatColor, getHeatTextColor } from '../../utils/heatColor.js'
+import { getHeatColor, getHeatTextColor, PDH_BREAKOUT_COLOR } from '../../utils/heatColor.js'
 
-export const StockTile = memo(function StockTile({ stock, onClick }) {
+export const StockTile = memo(function StockTile({ stock, onClick, pdhBroken, pdhLabel = 'PDH broken (9:30 candle)' }) {
   const { quote } = stock
   const changePct = quote?.changePct ?? null
-  const bg = getHeatColor(changePct)
-  const fg = getHeatTextColor(changePct)
+  const bg = pdhBroken ? PDH_BREAKOUT_COLOR : getHeatColor(changePct)
+  const fg = pdhBroken ? '#ffffff' : getHeatTextColor(changePct)
 
   const tooltipContent = (
     <div className="space-y-1">
@@ -19,6 +19,9 @@ export const StockTile = memo(function StockTile({ stock, onClick }) {
         <div className={changePct >= 0 ? 'text-green-400' : 'text-red-400'}>
           {formatChange(changePct, true)}
         </div>
+      )}
+      {pdhBroken && (
+        <div style={{ color: PDH_BREAKOUT_COLOR }}>🟣 {pdhLabel}</div>
       )}
     </div>
   )

@@ -63,8 +63,17 @@ export function useStockData(symbols) {
     }
 
     setDataSource('upstox-poll')
-    if (!isMarketOpen()) return
-    const interval = setInterval(refresh, 2000)
+    // Tick every 2s so we react the instant the market opens, but only actually
+    // refetch every 2s while it's open. While closed, heartbeat once/minute instead
+    // of stopping entirely — self-heals a failed initial fetch (cold function, blip)
+    // so the page doesn't get stuck on "No data" until reload, without hammering
+    // the API for prices that aren't moving.
+    let closedTicks = 0
+    const interval = setInterval(() => {
+      if (isMarketOpen()) { closedTicks = 0; refresh(); return }
+      closedTicks++
+      if (closedTicks % 30 === 0) refresh()
+    }, 2000)
     return () => clearInterval(interval)
   }, [streaming, symbolsKey, refresh, applyQuotes])
 
