@@ -30,6 +30,22 @@ const BATCH_DELAY = 400
 const CANDLE_TIME = '09:30'
 const READY_AFTER_MINS = 9 * 60 + 31   // candle closes at 09:31 IST
 
+// Splits `list` into symbols already known (per _cache) vs. still needing a fetch.
+function resolveFromCache(list, mode) {
+  const dateKey = istDateKey()
+  const already = []
+  const pending = []
+  for (const s of list) {
+    const cacheKey = `${dateKey}:${mode}:${s.yahooSymbol}`
+    if (_cache.has(cacheKey)) {
+      if (_cache.get(cacheKey)) already.push(s.yahooSymbol)
+    } else {
+      pending.push(s)
+    }
+  }
+  return { dateKey, already, pending }
+}
+
 // Flags stocks whose 09:30 1-minute candle broke through the previous day's
 // high (mode: 'breakout', for Gainers/F&O) or low (mode: 'breakdown', for Losers —
 // checking for fresh highs on declining stocks doesn't make sense; fresh lows do).
@@ -47,28 +63,22 @@ export function usePDHBreakout(stocks, mode = 'breakout') {
 
   useEffect(() => {
     cancelRef.current = false
-    // Reset on every (list, mode) change — re-populated synchronously below from
-    // cache before this commits, so already-known flags don't visibly flash away.
-    // Necessary because mode can switch (Gainers/F&O -> Losers) on the same hook
-    // instance, and a symbol's breakout-mode flag must not leak into breakdown mode.
-    setBreakouts(new Set())
+    // Resync from cache unconditionally, every time (list, mode) changes — this
+    // must NOT be gated behind `runningRef`. Gainers/Losers membership churns on
+    // nearly every price tick (boundary stocks swap in/out of the top 100), which
+    // changes symbolsKey and re-fires this effect while a previous batch-fetch
+    // cycle (which can take many seconds under Upstox's rate limiting) is still
+    // in flight. If the resync were skipped whenever a fetch was running, already-
+    // known purple flags would vanish until that stale run finished — exactly the
+    // "purple reverts to green/red" flicker this fixes.
+    const { already } = resolveFromCache(stocksRef.current, mode)
+    setBreakouts(new Set(already))
 
     const tryRun = async () => {
       if (runningRef.current || cancelRef.current) return
       if (istMinutesSinceMidnight() < READY_AFTER_MINS) return
 
-      const dateKey = istDateKey()
-      const list = stocksRef.current
-      const pending = []
-      const already = []
-      for (const s of list) {
-        const cacheKey = `${dateKey}:${mode}:${s.yahooSymbol}`
-        if (_cache.has(cacheKey)) {
-          if (_cache.get(cacheKey)) already.push(s.yahooSymbol)
-        } else {
-          pending.push(s)
-        }
-      }
+      const { dateKey, already, pending } = resolveFromCache(stocksRef.current, mode)
       if (already.length) {
         setBreakouts(prev => new Set([...prev, ...already]))
       }
