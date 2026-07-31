@@ -33,18 +33,21 @@ export function MarketBanner() {
       bg: 'rgba(0,100,40,0.25)',
       border: 'rgba(0,200,83,0.3)',
       text: '🟢 MARKET OPEN — Live prices updating every 60s',
+      shortText: '🟢 MARKET OPEN',
       extra: nextClose ? `Next close: ${new Date(nextClose).toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' })} IST` : null
     },
     'pre-open': {
       bg: 'rgba(100,80,0,0.25)',
       border: 'rgba(200,170,0,0.3)',
       text: '🟡 PRE-OPEN SESSION 9:00–9:15 AM',
+      shortText: '🟡 PRE-OPEN',
       extra: `Market opens in: ${countdown}`
     },
     closed: {
       bg: 'rgba(80,0,0,0.2)',
       border: 'rgba(180,0,0,0.25)',
       text: '🔴 MARKET CLOSED — Showing previous close data',
+      shortText: '🔴 MARKET CLOSED',
       extra: nextOpen ? `Next open: ${new Date(nextOpen).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', weekday: 'short', hour: '2-digit', minute: '2-digit' })} IST` : null
     }
   }
@@ -53,9 +56,12 @@ export function MarketBanner() {
 
   return (
     <div style={{ background: cfg.bg, borderBottom: `1px solid ${cfg.border}` }}
-      className="flex items-center justify-between px-4 py-1.5 text-xs flex-shrink-0 flex-wrap gap-1">
-      <span className="font-medium text-[var(--text-primary)]">{cfg.text}</span>
-      <div className="flex items-center gap-3 text-[var(--text-secondary)]">
+      className="flex items-center justify-between px-3 py-1 md:px-4 md:py-1.5 text-xs flex-shrink-0 flex-wrap gap-1">
+      <span className="font-medium text-[var(--text-primary)]">
+        <span className="hidden sm:inline">{cfg.text}</span>
+        <span className="sm:hidden">{cfg.shortText}</span>
+      </span>
+      <div className="items-center gap-3 text-[var(--text-secondary)] hidden sm:flex">
         {cfg.extra && <span>{cfg.extra}</span>}
         <span className="font-mono text-[var(--text-muted)]">IST: {time}</span>
       </div>

@@ -6,12 +6,17 @@ import { useApp } from '../../context/AppContext.jsx'
 // Global symbol/name search shared by desktop (inline, in Header) and mobile
 // (a dedicated sticky row under the header) — both instances share this one
 // component so match logic + the OPEN_STOCK_DETAIL wiring live in one place.
-export function HeaderSearch({ className = '' }) {
+export function HeaderSearch({ className = '', autoFocus = false, onSelect: onSelectCallback }) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState(false)
   const debounced = useDebouncedValue(query, 200)
   const { dispatch } = useApp()
   const rootRef = useRef(null)
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    if (autoFocus) inputRef.current?.focus()
+  }, [autoFocus])
 
   const results = useMemo(() => {
     const q = debounced.trim().toLowerCase()
@@ -36,6 +41,7 @@ export function HeaderSearch({ className = '' }) {
     dispatch({ type: 'OPEN_STOCK_DETAIL', payload: stock.symbol })
     setQuery('')
     setOpen(false)
+    onSelectCallback?.()
   }
 
   return (
@@ -43,6 +49,7 @@ export function HeaderSearch({ className = '' }) {
       <div className="relative">
         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)] text-sm pointer-events-none">🔍</span>
         <input
+          ref={inputRef}
           type="text"
           value={query}
           onChange={e => { setQuery(e.target.value); setOpen(true) }}

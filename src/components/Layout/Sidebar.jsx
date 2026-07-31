@@ -38,19 +38,22 @@ export function Sidebar() {
       </aside>
 
       {/* Mobile bottom nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--bg-secondary)] border-t border-[var(--border)] flex">
+      <nav
+        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--bg-secondary)] border-t border-[var(--border)] flex"
+        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
         {NAV.map(item => (
           <button
             key={item.id}
             onClick={() => setView(item.id)}
-            className={`flex-1 flex flex-col items-center justify-center py-2 gap-0.5 text-xs transition-colors relative
+            className={`flex-1 flex flex-col items-center justify-center py-1.5 gap-0.5 text-xs transition-colors relative min-h-[44px]
               ${state.activeView === item.id ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'}`}
           >
             {state.activeView === item.id && (
               <div className="absolute top-0 left-1 right-1 h-0.5 bg-[var(--accent)] rounded-b" />
             )}
-            <span className="text-lg leading-none">{item.icon}</span>
-            <span className="font-medium">{item.label}</span>
+            <span className="text-base leading-none">{item.icon}</span>
+            <span className="font-medium text-[10px] leading-none">{item.label}</span>
           </button>
         ))}
       </nav>

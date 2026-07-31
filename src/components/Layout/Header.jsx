@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { MarketStatus } from './MarketStatus.jsx'
 import { HeaderSearch } from './HeaderSearch.jsx'
 import { formatTime } from '../../utils/formatters.js'
@@ -7,6 +7,9 @@ import { useTheme } from '../../context/ThemeContext.jsx'
 
 export function Header({ onSettingsOpen }) {
   const [time, setTime] = useState(formatTime(new Date()))
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
+  const searchRef = useRef(null)
+  const searchToggleRef = useRef(null)
   const { addToast } = useApp()
   const { theme, toggleTheme } = useTheme()
 
@@ -14,6 +17,24 @@ export function Header({ onSettingsOpen }) {
     const t = setInterval(() => setTime(formatTime(new Date())), 1000)
     return () => clearInterval(t)
   }, [])
+
+  // Mobile search is a toggleable overlay (not a permanent row) — closes on
+  // outside tap or Escape so it doesn't cost screen space when not in use.
+  useEffect(() => {
+    if (!mobileSearchOpen) return
+    const onClick = e => {
+      if (searchRef.current?.contains(e.target)) return
+      if (searchToggleRef.current?.contains(e.target)) return   // let the button's own onClick handle the toggle
+      setMobileSearchOpen(false)
+    }
+    const onKey = e => { if (e.key === 'Escape') setMobileSearchOpen(false) }
+    document.addEventListener('mousedown', onClick)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onClick)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [mobileSearchOpen])
 
   const refreshSymbols = async () => {
     addToast('Refreshing symbols from NSE...', 'info')
@@ -30,9 +51,11 @@ export function Header({ onSettingsOpen }) {
     }
   }
 
+  const iconBtn = 'w-9 h-9 flex items-center justify-center rounded text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors text-base flex-shrink-0'
+
   return (
-    <div className="sticky top-0 z-40 flex-shrink-0">
-      <header className="h-14 border-b border-[var(--border)] bg-[var(--bg-secondary)] flex items-center px-4 md:px-6 gap-3">
+    <div className="sticky top-0 z-40 flex-shrink-0 relative">
+      <header className="h-12 md:h-14 border-b border-[var(--border)] bg-[var(--bg-secondary)] flex items-center px-3 md:px-6 gap-2 md:gap-3">
         <div className="flex items-center gap-1.5 flex-shrink-0">
           <span className="text-base md:text-lg font-bold text-[var(--accent)]">Stocky</span>
           <span className="text-base md:text-lg font-bold text-[var(--text-primary)] hidden sm:inline">NSE Dashboard</span>
@@ -57,9 +80,19 @@ export function Header({ onSettingsOpen }) {
         )}
 
         <button
+          ref={searchToggleRef}
+          onClick={() => setMobileSearchOpen(v => !v)}
+          title="Search"
+          aria-label="Search stocks"
+          className={`${iconBtn} md:hidden`}
+        >
+          🔍
+        </button>
+
+        <button
           onClick={toggleTheme}
           title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-          className="p-1.5 rounded text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors text-base"
+          className={iconBtn}
         >
           {theme === 'dark' ? '☀️' : '🌙'}
         </button>
@@ -67,15 +100,17 @@ export function Header({ onSettingsOpen }) {
         <button
           onClick={onSettingsOpen}
           title="Settings"
-          className="p-1.5 rounded text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors text-base"
+          className={iconBtn}
         >
           ⚙️
         </button>
       </header>
 
-      <div className="md:hidden px-3 py-2 border-b border-[var(--border)] bg-[var(--bg-secondary)]">
-        <HeaderSearch />
-      </div>
+      {mobileSearchOpen && (
+        <div ref={searchRef} className="md:hidden absolute left-0 right-0 top-full px-3 py-2 border-b border-[var(--border)] bg-[var(--bg-secondary)] shadow-xl z-40">
+          <HeaderSearch autoFocus onSelect={() => setMobileSearchOpen(false)} />
+        </div>
+      )}
     </div>
   )
 }

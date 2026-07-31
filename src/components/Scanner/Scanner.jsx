@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useEffect } from 'react'
 import { useScanner, DEFAULT_SCAN_OPTIONS } from '../../hooks/useScanner.js'
 import { useGainersLosers } from '../../hooks/useGainersLosers.js'
 import { useStockData } from '../../hooks/useStockData.js'
@@ -61,6 +61,12 @@ export function Scanner() {
   const { gainers, losers, quotes: rankQuotes, dataSource } = useGainersLosers()
   const { quotes: foQuotes } = useStockData(niftyFO)
   const { results: scanResults, scanning, progress, timeRemaining, runScan, cancel } = useScanner()
+
+  // Doji isn't offered for F&O — force it off if the user had it on from
+  // another tab so it doesn't silently stay active as a hidden filter.
+  useEffect(() => {
+    if (tab === 'F&O' && options.doji) setOptions(o => ({ ...o, doji: false }))
+  }, [tab])
 
   const debouncedLive = useDebouncedValue(liveFilters, 250)
 
@@ -186,7 +192,9 @@ export function Scanner() {
           <div>
             <label className="block text-xs text-[var(--text-muted)] mb-2 uppercase tracking-wider">Patterns &amp; Indicators</label>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              <FilterCheckbox checked={options.doji} onChange={() => toggleOption('doji')} label="Previous Day Doji" />
+              {tab !== 'F&O' && (
+                <FilterCheckbox checked={options.doji} onChange={() => toggleOption('doji')} label="Previous Day Doji" />
+              )}
 
               <FilterCheckbox checked={options.breakout} onChange={() => toggleOption('breakout')} label="High Breakout">
                 <input type="time" value={options.breakoutTime} min="09:15" max="15:25" step="60"

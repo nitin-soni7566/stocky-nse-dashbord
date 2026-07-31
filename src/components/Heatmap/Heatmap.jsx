@@ -59,7 +59,7 @@ function IndexHeatmap() {
   return (
     <>
       {!loading && (
-        <div className="px-3 py-2 border-b border-[var(--border)] text-xs text-[var(--text-secondary)] flex flex-wrap gap-x-4 gap-y-1 flex-shrink-0">
+        <div className="px-2 py-1.5 md:px-3 md:py-2 border-b border-[var(--border)] text-xs text-[var(--text-secondary)] flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1 flex-shrink-0">
           <span>📈 Advancing: <span className="text-green-400 font-semibold">{advancing}</span></span>
           <span>📉 Declining: <span className="text-red-400 font-semibold">{declining}</span></span>
           {best && quotes[best.symbol]?.changePct != null && (
@@ -71,7 +71,7 @@ function IndexHeatmap() {
         </div>
       )}
 
-      <div className="flex-1 overflow-auto p-3">
+      <div className="flex-1 overflow-auto p-2 md:p-3">
         {loading ? (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {Array.from({ length: 18 }).map((_, i) => (
@@ -122,7 +122,7 @@ function StockHeatmap({ mode, onSelectStock }) {
     : 'Purple = Previous Day High broken during 9:30 AM candle'
 
   return (
-    <div className="flex-1 overflow-auto p-3">
+    <div className="flex-1 overflow-auto p-2 md:p-3">
       {loading ? (
         <div className="flex flex-wrap gap-1.5">
           {Array.from({ length: 60 }).map((_, i) => (
@@ -167,13 +167,13 @@ export function Heatmap() {
   return (
     <ErrorBoundary>
       <div className="flex flex-col h-full">
-        <div className="flex flex-wrap items-center gap-2 px-3 py-2 border-b border-[var(--border)] flex-shrink-0">
+        <div className="flex flex-wrap items-center gap-1.5 md:gap-2 px-2 py-1.5 md:px-3 md:py-2 border-b border-[var(--border)] flex-shrink-0">
           <div className="flex gap-1">
             {[['indices', '🏢 Sector Indices'], ['stocks', '📊 Stock Heatmap']].map(([id, label]) => (
               <button
                 key={id}
                 onClick={() => setMode(id)}
-                className={`px-3 py-1.5 rounded text-xs font-medium transition-colors border
+                className={`px-2.5 py-1 md:px-3 md:py-1.5 rounded text-xs font-medium transition-colors border
                   ${mode === id ? 'bg-[var(--accent)] text-black border-[var(--accent)]' : 'bg-[var(--bg-card)] text-[var(--text-secondary)] border-[var(--border)] hover:text-[var(--text-primary)]'}`}
               >
                 {label}
@@ -182,12 +182,12 @@ export function Heatmap() {
           </div>
 
           {mode === 'stocks' && (
-            <div className="flex gap-1 ml-2">
+            <div className="flex gap-1 ml-1 md:ml-2">
               {['Gainers', 'Losers', 'F&O'].map(idx => (
                 <button
                   key={idx}
                   onClick={() => setStockMode(idx)}
-                  className={`px-2.5 py-1 rounded text-xs transition-colors border
+                  className={`px-2 py-1 rounded text-xs transition-colors border
                     ${stockMode === idx ? 'border-[var(--accent)] text-[var(--accent)]' : 'border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)]'}`}
                 >
                   {idx === 'Gainers' ? '📈 Gainers' : idx === 'Losers' ? '📉 Losers' : '⚙️ F&O'}

@@ -85,13 +85,13 @@ export default function App() {
 
       <div className="flex flex-1 overflow-hidden">
         <Sidebar />
-        <main className="flex-1 overflow-hidden flex flex-col pb-16 md:pb-0">
+        <main className="flex-1 overflow-hidden flex flex-col pb-[calc(2.75rem+env(safe-area-inset-bottom))] md:pb-0">
           <div className="flex-1 overflow-hidden">
             <Suspense fallback={<PageSkeleton />}>
               {views[state.activeView] ?? <Dashboard />}
             </Suspense>
           </div>
-          <footer className="flex-shrink-0 border-t border-[var(--border)] px-4 md:px-6 py-2 flex items-center justify-end gap-3">
+          <footer className="hidden md:flex flex-shrink-0 border-t border-[var(--border)] px-4 md:px-6 py-2 items-center justify-end gap-3">
             <span className="text-xs text-[var(--text-muted)]">Developed by</span>
             <span className="text-xs font-medium text-[var(--text-secondary)]">Nitin Soni</span>
             <span className="text-[var(--border)]">·</span>
